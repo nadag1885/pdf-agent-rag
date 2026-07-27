@@ -11,9 +11,19 @@ administrator into data/<topic>/ and indexed with
 from __future__ import annotations
 
 import sys
-from pathlib import Path
 
-import streamlit as st
+# ChromaDB needs sqlite3 >= 3.35, but some hosts (Streamlit Community Cloud)
+# ship an older system sqlite3. Swap in the bundled modern build before
+# anything imports chromadb. No-op where pysqlite3 isn't installed.
+try:  # pragma: no cover - environment specific
+    __import__("pysqlite3")
+    sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+except ModuleNotFoundError:
+    pass
+
+from pathlib import Path  # noqa: E402
+
+import streamlit as st  # noqa: E402
 
 # Make ``src`` importable regardless of launch directory.
 PROJECT_ROOT = Path(__file__).resolve().parent

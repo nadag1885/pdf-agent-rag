@@ -3,11 +3,15 @@ langchain>=0.3.0
 langchain-community>=0.3.0
 langchain-huggingface>=0.1.0
 langchain-chroma>=0.1.4
-langchain-groq>=0.2.0
 
-# Vector DB + embeddings
+# Answer generation (either provider, selected by LLM_PROVIDER)
+langchain-groq>=0.2.0
+langchain-google-genai>=2.0.0
+
+# Vector DB + embeddings + keyword search
 chromadb>=0.5.0
 sentence-transformers>=3.0.0
+rank-bm25>=0.2.2
 
 # PDF extraction
 pymupdf>=1.24.0
@@ -15,3 +19,8 @@ pymupdf>=1.24.0
 # UI + config
 streamlit>=1.36.0
 python-dotenv>=1.0.0
+
+# Streamlit Community Cloud ships an old system sqlite3 that ChromaDB rejects.
+# app.py swaps this in before chromadb is imported. Linux-only, so it is
+# skipped on Windows/macOS where the bundled sqlite3 is already new enough.
+pysqlite3-binary>=0.5.0; sys_platform == "linux"
