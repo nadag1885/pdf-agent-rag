@@ -87,7 +87,12 @@ def main() -> int:
 
     print(f"Data folder     : {config.DATA_DIR}")
     print(f"Vector store    : {config.VECTORSTORE_DIR}")
-    print(f"Embedding model : {config.EMBEDDING_MODEL_NAME}")
+    embed_name = (
+        f"{config.GOOGLE_EMBEDDING_MODEL} ({config.GOOGLE_EMBEDDING_DIMS}d, API)"
+        if config.EMBEDDING_PROVIDER == "google"
+        else f"{config.EMBEDDING_MODEL_NAME} (local)"
+    )
+    print(f"Embedding model : {embed_name}")
     print(f"Mode            : {'REBUILD' if args.rebuild else 'incremental update'}")
     print("-" * 60)
 

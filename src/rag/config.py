@@ -32,15 +32,44 @@ ENV_PATH: Path = PROJECT_ROOT / ".env"
 # Load environment variables from the project's .env file.
 load_dotenv(ENV_PATH)
 
+
+def _from_streamlit_secrets(var: str) -> str:
+    """Read a value from Streamlit secrets when deployed.
+
+    A hosted app has no .env file, so settings and keys come from the app's
+    secrets instead. Defined before first use and imported lazily, so the CLI
+    scripts never require Streamlit.
+    """
+    try:
+        import streamlit as st
+
+        return str(st.secrets.get(var, "")).strip()
+    except Exception:
+        return ""
+
 # ---------------------------------------------------------------------------
 # Models
 # ---------------------------------------------------------------------------
-# Free, local embedding model (downloaded once, then cached).
-# Multilingual model so both English and Arabic questions retrieve well
-# (the documents are bilingual Arabic/English). Overridable via EMBEDDING_MODEL.
+# Where embeddings come from:
+#   "local"  - sentence-transformers on this machine (free, needs torch, ~2 GB)
+#   "google" - Gemini embedding API (no torch, tiny memory: use this for hosting)
+EMBEDDING_PROVIDER: str = (
+    os.getenv("EMBEDDING_PROVIDER") or _from_streamlit_secrets("EMBEDDING_PROVIDER")
+    or "local"
+).strip().lower()
+
+# Local embedding model. Multilingual so both English and Arabic questions
+# retrieve well (the documents are bilingual).
 EMBEDDING_MODEL_NAME: str = os.getenv(
     "EMBEDDING_MODEL", "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 )
+
+# Gemini embedding model. 3072 dimensions natively; truncated to keep the
+# vector store small enough to publish while retaining quality.
+GOOGLE_EMBEDDING_MODEL: str = os.getenv(
+    "GOOGLE_EMBEDDING_MODEL", "models/gemini-embedding-001"
+)
+GOOGLE_EMBEDDING_DIMS: int = int(os.getenv("GOOGLE_EMBEDDING_DIMS", "768"))
 
 # Which service generates the answers: "groq" or "google" (Gemini).
 LLM_PROVIDER: str = os.getenv("LLM_PROVIDER", "groq").strip().lower()
@@ -135,9 +164,10 @@ NOT_FOUND_MESSAGE: str = "This information was not found in the available docume
 def _read_key(var: str, where: str) -> str:
     """Read an API key from the environment or raise an actionable error.
 
-    Keys are read from .env only; they are never logged or printed.
+    Locally the key comes from .env; on Streamlit Cloud there is no .env, so
+    the app's secrets are used instead. Keys are never logged or printed.
     """
-    key = os.getenv(var, "").strip()
+    key = os.getenv(var, "").strip() or _from_streamlit_secrets(var)
     placeholder = (
         key.upper().startswith("PASTE_")
         or key in {"your_groq_api_key_here", "your_google_api_key_here"}
