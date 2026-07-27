@@ -17,9 +17,16 @@ from dotenv import load_dotenv
 # config.py -> src/rag -> src -> project root
 PROJECT_ROOT: Path = Path(__file__).resolve().parents[2]
 
+# Source PDFs live in data/, organized into one subfolder per topic.
+DATA_DIR: Path = PROJECT_ROOT / "data"
+# Kept for backwards compatibility; not the primary source anymore.
 DOCUMENTS_DIR: Path = PROJECT_ROOT / "documents"
 VECTORSTORE_DIR: Path = PROJECT_ROOT / "vectorstore"
 MANIFEST_PATH: Path = VECTORSTORE_DIR / "manifest.json"
+# Shared "learned answers" store — question->answer pairs learned from ALL
+# users' interactions and reused for everyone. Kept in a separate directory so
+# a document --rebuild does not erase it.
+LEARNED_DIR: Path = PROJECT_ROOT / "learned_store"
 ENV_PATH: Path = PROJECT_ROOT / ".env"
 
 # Load environment variables from the project's .env file.
@@ -35,11 +42,24 @@ EMBEDDING_MODEL_NAME: str = os.getenv(
     "EMBEDDING_MODEL", "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 )
 
+# Which service generates the answers: "groq" or "google" (Gemini).
+LLM_PROVIDER: str = os.getenv("LLM_PROVIDER", "groq").strip().lower()
+
 # Groq chat model used for answer generation.
 GROQ_MODEL: str = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
 
+# Gemini model. Use the rolling "-latest" aliases: specific versions such as
+# gemini-2.5-flash are no longer served to newly-created API keys.
+GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "gemini-flash-latest")
+
 # ChromaDB collection name.
 COLLECTION_NAME: str = "pdf_knowledge_base"
+
+# Shared learned-answers collection + how similar a new question must be to an
+# already-answered one to reuse the stored answer (cosine distance; smaller =
+# stricter/more-identical). Kept tight so only near-duplicate questions reuse.
+LEARNED_COLLECTION: str = "learned_qa"
+LEARNED_MATCH_DISTANCE: float = 0.20
 
 # ---------------------------------------------------------------------------
 # Chunking
@@ -84,13 +104,26 @@ SECTION_BOOST: float = 0.15
 # Max chunks sent to the LLM after expansion + reranking.
 CONTEXT_MAX: int = 12
 
+# ---------------------------------------------------------------------------
+# Hybrid retrieval
+# ---------------------------------------------------------------------------
+# Weight of the keyword (BM25) ranker relative to the semantic one in the
+# rank fusion. 1.0 = equal say.
+BM25_WEIGHT: float = 1.0
+
+# Optional cross-encoder reranker (empty string disables it). Downloads once.
+RERANKER_MODEL: str = os.getenv("RERANKER_MODEL", "")
+
 # Chroma returns a cosine *distance* (0 = identical, 2 = opposite). Chunks
 # whose distance exceeds this are treated as irrelevant and dropped. Calibrated
 # for the MiniLM model: genuinely relevant chunks score well below ~0.8, while
 # unrelated text clusters around ~1.0. Tunable; higher = more permissive. This
 # is a cheap first-pass filter — the strict system prompt in qa.py is the
 # primary guard against answering from outside the documents.
-MAX_RELEVANCE_DISTANCE: float = 0.9
+# Calibrated on the full 5,829-chunk corpus: real questions score up to ~0.52,
+# unrelated questions bottom out at ~0.56, so 0.58 keeps every genuine question
+# while rejecting off-topic ones. (Re-measure if the embedding model changes.)
+MAX_RELEVANCE_DISTANCE: float = 0.58
 
 # ---------------------------------------------------------------------------
 # Behaviour constants
@@ -99,18 +132,39 @@ MAX_RELEVANCE_DISTANCE: float = 0.9
 NOT_FOUND_MESSAGE: str = "This information was not found in the available documents."
 
 
-def get_groq_api_key() -> str:
-    """Return the Groq API key or raise a clear, actionable error.
+def _read_key(var: str, where: str) -> str:
+    """Read an API key from the environment or raise an actionable error.
 
-    The key is read from the environment (.env). It is never logged or
-    printed anywhere in the codebase.
+    Keys are read from .env only; they are never logged or printed.
     """
-    key = os.getenv("GROQ_API_KEY", "").strip()
-    placeholder = key.upper().startswith("PASTE_") or key == "your_groq_api_key_here"
+    key = os.getenv(var, "").strip()
+    placeholder = (
+        key.upper().startswith("PASTE_")
+        or key in {"your_groq_api_key_here", "your_google_api_key_here"}
+    )
     if not key or placeholder:
         raise RuntimeError(
-            "GROQ_API_KEY is missing. Create a .env file in the project root "
-            "containing:\n\n    GROQ_API_KEY=your_real_key\n\n"
-            "Get a key at https://console.groq.com (API Keys)."
+            f"{var} is missing. Add it to the .env file in the project root:\n\n"
+            f"    {var}=your_real_key\n\nGet a key at {where}."
         )
     return key
+
+
+def get_groq_api_key() -> str:
+    return _read_key("GROQ_API_KEY", "https://console.groq.com (API Keys)")
+
+
+def get_google_api_key() -> str:
+    return _read_key("GOOGLE_API_KEY", "https://aistudio.google.com/apikey")
+
+
+def get_llm_api_key() -> str:
+    """Return the key for whichever provider is configured."""
+    if LLM_PROVIDER == "google":
+        return get_google_api_key()
+    return get_groq_api_key()
+
+
+def active_model() -> str:
+    """Human-readable name of the model answering questions."""
+    return GEMINI_MODEL if LLM_PROVIDER == "google" else GROQ_MODEL

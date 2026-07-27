@@ -41,20 +41,51 @@ def main() -> int:
         action="store_true",
         help="Show current index stats and exit (no changes made).",
     )
+    parser.add_argument(
+        "--clear-learned",
+        action="store_true",
+        help="Wipe the shared learned-answers store (does not touch documents).",
+    )
     args = parser.parse_args()
 
+    if args.clear_learned:
+        from src.rag.learned import clear_learned, learned_count  # noqa: E402
+
+        n = learned_count()
+        clear_learned()
+        print(f"Cleared the learned-answers store ({n} pairs removed).")
+        return 0
+
     if args.status:
+        from src.rag.indexer import list_topics  # noqa: E402
+
         stats = index_stats()
         print("Index status")
         print("------------")
         print(f"  Store exists : {stats['exists']}")
+        print(f"  Topics       : {stats.get('num_topics', 0)}")
         print(f"  Files indexed: {stats['num_files']}")
         print(f"  Total chunks : {stats['num_chunks']}")
-        for name in stats["files"]:
-            print(f"    - {name}")
+        from src.rag.catalog import catalog_stats  # noqa: E402
+        from src.rag.learned import learned_count  # noqa: E402
+
+        print(f"  Learned Q&A  : {learned_count()}")
+        cat = catalog_stats()
+        print(
+            f"  Catalog      : {cat['topics']} topics, {cat['variants']} product "
+            f"types, {cat['documents']} docs"
+        )
+        if cat["documents"] != stats["num_files"]:
+            print(
+                "    ! catalog is out of date "
+                f"({cat['documents']} catalogued vs {stats['num_files']} indexed). "
+                "Ask Claude to rebuild catalog.json so new documents get product types."
+            )
+        for t in list_topics():
+            print(f"    - {t['topic']}  ({t['num_files']} docs, {t['num_chunks']} chunks)")
         return 0
 
-    print(f"Documents folder: {config.DOCUMENTS_DIR}")
+    print(f"Data folder     : {config.DATA_DIR}")
     print(f"Vector store    : {config.VECTORSTORE_DIR}")
     print(f"Embedding model : {config.EMBEDDING_MODEL_NAME}")
     print(f"Mode            : {'REBUILD' if args.rebuild else 'incremental update'}")

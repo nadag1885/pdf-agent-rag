@@ -51,6 +51,74 @@ def list_pdf_files(documents_dir: Path) -> list[Path]:
     )
 
 
+@dataclass
+class TopicPDF:
+    """A PDF located inside a topic subfolder of the data directory."""
+
+    path: Path
+    topic: str  # immediate subfolder name under data/
+    rel: str  # path relative to data/ (unique key, e.g. "01 - .../file.pdf")
+    source: str  # filename only (for citations)
+
+
+def list_topic_pdfs(data_dir: Path) -> list[TopicPDF]:
+    """Return every PDF under data/, tagged with its topic (subfolder name).
+
+    Each top-level subfolder of ``data_dir`` is a topic. PDFs placed directly in
+    data/ (no subfolder) are grouped under the "General" topic. Search is
+    recursive so PDFs in deeper subfolders keep their top-level topic.
+    """
+    if not data_dir.exists():
+        return []
+    out: list[TopicPDF] = []
+    for p in sorted(data_dir.rglob("*")):
+        if not (p.is_file() and p.suffix.lower() == ".pdf"):
+            continue
+        rel_parts = p.relative_to(data_dir).parts
+        topic = rel_parts[0] if len(rel_parts) > 1 else "General"
+        out.append(
+            TopicPDF(
+                path=p,
+                topic=topic,
+                rel=p.relative_to(data_dir).as_posix(),
+                source=p.name,
+            )
+        )
+    return out
+
+
+def _extract_tables(page, max_tables: int = 4) -> str:
+    """Render a page's tables as pipe-separated rows.
+
+    These specifications carry their real values in "Guarantee Tables"
+    (``Rated voltage ....... kV``). Plain text extraction flattens those into
+    an unreadable stream and the row/value pairing is lost, so tables are also
+    emitted in a structured form that retrieval and the model can follow.
+    """
+    try:
+        finder = page.find_tables()
+    except Exception:
+        return ""
+
+    blocks: list[str] = []
+    for table in list(getattr(finder, "tables", []) or [])[:max_tables]:
+        try:
+            rows = table.extract()
+        except Exception:
+            continue
+        lines = []
+        for row in rows:
+            cells = [
+                " ".join(str(c).split()) if c is not None else "" for c in row
+            ]
+            if not any(cells):
+                continue
+            lines.append(" | ".join(cells))
+        if len(lines) >= 2:  # a header plus at least one data row
+            blocks.append("[TABLE]\n" + "\n".join(lines))
+    return "\n\n".join(blocks)
+
+
 def load_pdf(path: Path) -> LoadResult:
     """Extract text from a single PDF, page by page.
 
@@ -72,6 +140,9 @@ def load_pdf(path: Path) -> LoadResult:
             try:
                 page = doc.load_page(index)
                 text = page.get_text("text").strip()
+                tables = _extract_tables(page)
+                if tables:
+                    text = f"{text}\n\n{tables}" if text else tables
             except Exception as exc:  # a single bad page
                 result.error = (
                     (result.error or "")

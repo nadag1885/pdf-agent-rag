@@ -43,3 +43,23 @@ def get_vectorstore(embeddings: HuggingFaceEmbeddings | None = None) -> Chroma:
         persist_directory=str(config.VECTORSTORE_DIR),
         collection_metadata={"hnsw:space": "cosine"},
     )
+
+
+def get_learned_store(embeddings: HuggingFaceEmbeddings | None = None) -> Chroma:
+    """Return the persistent Chroma store of learned question->answer pairs.
+
+    Questions are embedded (same model as the documents) so a new question can
+    be matched against previously answered ones. Stored in its own directory so
+    a document rebuild does not wipe learned answers.
+    """
+    if embeddings is None:
+        embeddings = get_embeddings()
+
+    config.LEARNED_DIR.mkdir(parents=True, exist_ok=True)
+
+    return Chroma(
+        collection_name=config.LEARNED_COLLECTION,
+        embedding_function=embeddings,
+        persist_directory=str(config.LEARNED_DIR),
+        collection_metadata={"hnsw:space": "cosine"},
+    )

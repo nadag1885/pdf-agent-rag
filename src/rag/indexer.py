@@ -19,7 +19,7 @@ from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from . import config
-from .pdf_loader import file_sha256, list_pdf_files, load_pdf
+from .pdf_loader import file_sha256, list_topic_pdfs, load_pdf
 from .store import get_embeddings, get_vectorstore
 
 
@@ -61,9 +61,9 @@ class IndexReport:
         lines = [
             "Indexing report",
             "----------------",
-            f"  Added     : {len(self.added)}  {self.added or ''}",
-            f"  Changed   : {len(self.changed)}  {self.changed or ''}",
-            f"  Removed   : {len(self.removed)}  {self.removed or ''}",
+            f"  Added     : {len(self.added)}",
+            f"  Changed   : {len(self.changed)}",
+            f"  Removed   : {len(self.removed)}",
             f"  Unchanged : {len(self.unchanged)}",
             f"  Chunks +  : {self.chunks_added}",
             f"  Chunks -  : {self.chunks_removed}",
@@ -130,12 +130,15 @@ def _heading_label(line: str) -> str | None:
     return None
 
 
-def _chunk_documents(path: Path) -> tuple[list[Document], list[str], str, bool, bool]:
+def _chunk_documents(
+    path: Path, topic: str, rel: str
+) -> tuple[list[Document], list[str], str, bool, bool]:
     """Return (documents, ids, error, corrupted, no_text) for one PDF.
 
     Each chunk keeps metadata:
       - ``source`` (filename) and ``page`` (1-based) for citation,
-      - ``seq``: global reading-order index, used for neighbor expansion,
+      - ``topic`` (subfolder) and ``rel`` (unique relative path) for filtering,
+      - ``seq``: per-document reading-order index, used for neighbor expansion,
       - ``section``: the current section heading (e.g. "Circuit Breakers"),
         used for section-aware reranking.
 
@@ -193,13 +196,15 @@ def _chunk_documents(path: Path) -> tuple[list[Document], list[str], str, bool, 
                         page_content=chunk,
                         metadata={
                             "source": page.source,
+                            "topic": topic,
+                            "rel": rel,
                             "page": page.page,
                             "seq": seq,
                             "section": section,
                         },
                     )
                 )
-                ids.append(f"{page.source}::{seq:05d}")
+                ids.append(f"{rel}::{seq:05d}")
                 seq += 1
 
     if not documents:
@@ -219,17 +224,17 @@ def reindex(rebuild: bool = False) -> IndexReport:
     """
     report = IndexReport()
 
-    if not config.DOCUMENTS_DIR.exists():
+    if not config.DATA_DIR.exists():
         raise FileNotFoundError(
-            f"documents/ folder not found at {config.DOCUMENTS_DIR}. "
-            "Create it and add approved PDF files."
+            f"data/ folder not found at {config.DATA_DIR}. "
+            "Create it, add one subfolder per topic, and place approved PDFs inside."
         )
 
-    pdf_paths = list_pdf_files(config.DOCUMENTS_DIR)
-    if not pdf_paths:
+    topic_pdfs = list_topic_pdfs(config.DATA_DIR)
+    if not topic_pdfs:
         raise FileNotFoundError(
-            f"No PDF files found in {config.DOCUMENTS_DIR}. "
-            "Add approved PDFs there, then run the indexer again."
+            f"No PDF files found under {config.DATA_DIR}. "
+            "Add topic subfolders containing PDFs, then run the indexer again."
         )
 
     # Fresh rebuild: drop the persisted store + manifest.
@@ -246,59 +251,71 @@ def reindex(rebuild: bool = False) -> IndexReport:
     get_embeddings()
     vs = get_vectorstore()
 
-    current: dict[str, str] = {p.name: file_sha256(p) for p in pdf_paths}
-    by_name = {p.name: p for p in pdf_paths}
+    # Keyed by unique relative path (topic/filename) so same-named files in
+    # different topics never collide.
+    current: dict[str, str] = {tp.rel: file_sha256(tp.path) for tp in topic_pdfs}
+    by_rel = {tp.rel: tp for tp in topic_pdfs}
 
-    added = [n for n in current if n not in manifest_files]
+    added = [r for r in current if r not in manifest_files]
     changed = [
-        n for n in current
-        if n in manifest_files and manifest_files[n].get("hash") != current[n]
+        r for r in current
+        if r in manifest_files and manifest_files[r].get("hash") != current[r]
     ]
-    removed = [n for n in manifest_files if n not in current]
+    removed = [r for r in manifest_files if r not in current]
     unchanged = [
-        n for n in current
-        if n in manifest_files and manifest_files[n].get("hash") == current[n]
+        r for r in current
+        if r in manifest_files and manifest_files[r].get("hash") == current[r]
     ]
 
     report.removed = removed
     report.unchanged = unchanged
 
-    # 1) Purge chunks for removed + changed files (prevents duplicates/staleness).
-    for name in removed + changed:
+    # 1) Purge chunks for removed + changed files (by unique rel).
+    for rel in removed + changed:
         try:
-            existing = vs.get(where={"source": name})
+            existing = vs.get(where={"rel": rel})
             n = len(existing.get("ids", []))
             if n:
                 vs.delete(ids=existing["ids"])
                 report.chunks_removed += n
         except Exception as exc:  # never abort the whole run on one delete
-            print(f"  ! Could not purge old chunks for {name}: {exc}")
-        manifest_files.pop(name, None)
+            print(f"  ! Could not purge old chunks for {rel}: {exc}")
+        manifest_files.pop(rel, None)
 
     # 2) (Re)index added + changed files.
-    for name in added + changed:
-        path = by_name[name]
-        docs, ids, error, corrupted, no_text = _chunk_documents(path)
+    for i, rel in enumerate(added + changed, start=1):
+        tp = by_rel[rel]
+        docs, ids, error, corrupted, no_text = _chunk_documents(tp.path, tp.topic, tp.rel)
         if corrupted:
-            report.corrupted.append(name)
-            print(f"  ! Skipping corrupted/unreadable PDF: {name} ({error})")
+            report.corrupted.append(rel)
+            print(f"  ! Skipping corrupted/unreadable PDF: {rel} ({error})")
             continue
         if no_text:
-            report.no_text.append(name)
-            print(f"  ! Skipping (no extractable text): {name}")
+            report.no_text.append(rel)
+            print(f"  ! Skipping (no extractable text): {rel}")
             continue
 
         vs.add_documents(documents=docs, ids=ids)
         report.chunks_added += len(docs)
-        manifest_files[name] = {
-            "hash": current[name],
+        manifest_files[rel] = {
+            "hash": current[rel],
             "chunks": len(docs),
+            "topic": tp.topic,
+            "source": tp.source,
         }
-        (report.changed if name in changed else report.added).append(name)
-        print(f"  + Indexed {name}: {len(docs)} chunks")
+        (report.changed if rel in changed else report.added).append(rel)
+        print(f"  + [{i}] [{tp.topic}] {tp.source}: {len(docs)} chunks")
 
     manifest["files"] = manifest_files
     save_manifest(manifest)
+
+    # The keyword index is built from the store, so drop its cache.
+    try:
+        from .retrieval import reset_corpus
+
+        reset_corpus()
+    except Exception:
+        pass
     return report
 
 
@@ -307,9 +324,33 @@ def index_stats() -> dict:
     manifest = load_manifest()
     files = manifest.get("files", {})
     total_chunks = sum(f.get("chunks", 0) for f in files.values())
+    topics = sorted({f.get("topic", "General") for f in files.values()})
     return {
         "exists": config.VECTORSTORE_DIR.exists() and bool(files),
         "num_files": len(files),
         "num_chunks": total_chunks,
-        "files": sorted(files.keys()),
+        "num_topics": len(topics),
+        "topics": topics,
     }
+
+
+def list_topics() -> list[dict]:
+    """Return [{topic, num_files, num_chunks}] for each topic, sorted by name."""
+    manifest = load_manifest()
+    files = manifest.get("files", {})
+    agg: dict[str, dict] = {}
+    for meta in files.values():
+        t = meta.get("topic", "General")
+        entry = agg.setdefault(t, {"topic": t, "num_files": 0, "num_chunks": 0})
+        entry["num_files"] += 1
+        entry["num_chunks"] += meta.get("chunks", 0)
+    return [agg[t] for t in sorted(agg)]
+
+
+def topic_files(topic: str) -> list[str]:
+    """Return the source filenames indexed under a given topic."""
+    manifest = load_manifest()
+    files = manifest.get("files", {})
+    return sorted(
+        {meta.get("source", rel) for rel, meta in files.items() if meta.get("topic") == topic}
+    )

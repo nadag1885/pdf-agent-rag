@@ -1,18 +1,41 @@
+# ---- Secrets ----
 .env
-.env.*
+api_key.env
+*.env
 !.env.example
 
+# ---- Vector database (ChromaDB persistent store) ----
+vectorstore/
+
+# ---- Shared learned-answers store ----
+learned_store/
+
+# ---- Approved PDFs (admin-managed, not committed) ----
+documents/*
+!documents/.gitkeep
+# Topic-organized source PDFs (large, admin-managed)
+data/
+
+# ---- Python ----
 __pycache__/
 *.py[cod]
+*$py.class
 .venv/
 venv/
+env/
+pdf_venv/
+*.egg-info/
+.pytest_cache/
 
-chroma_db/
-chroma/
-.vectorstore/
+# ---- Local model / HF caches (optional, can be large) ----
+.cache/
 
-.streamlit/secrets.toml
-
-.DS_Store
+# ---- OS / editor temp files ----
 Thumbs.db
-documents/*.pdf
+Desktop.ini
+.DS_Store
+*.tmp
+*.log
+*.swp
+.idea/
+.vscode/

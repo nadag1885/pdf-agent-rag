@@ -1,14 +1,31 @@
 # 📚 Document Q&A — Private PDF Knowledge Base (RAG)
 
 A local Retrieval-Augmented-Generation app. An **administrator** places approved
-PDFs in a private `documents/` folder and indexes them; **users** only get a chat
-box to ask questions. Answers are grounded **only** in the indexed PDFs and always
-cite the source **filename and page number**. If the documents don't contain the
-answer, the app replies:
+PDFs into a private `data/` folder organized by **topic** (one subfolder per
+topic) and indexes them; **users** first pick a topic, then get a chat box to ask
+questions about it. Answers are grounded **only** in that topic's indexed PDFs and
+always cite the source **filename and page number**. If the documents don't
+contain the answer, the app replies:
 
 > This information was not found in the available documents.
 
 **Users cannot upload files.** There is no upload component anywhere in the app.
+
+### 🧭 Product catalog & smart follow-up questions
+`catalog.json` describes what each topic actually contains — every distinct
+product type, its defining specs, and which PDFs define it (e.g. Transformers →
+oil-immersed / dry-type / coupling, each with its voltage class). The assistant
+uses it to:
+
+* **ask before guessing** — an ambiguous question ("tell me about the
+  transformer") gets a clarifying question with clickable options instead of a
+  blended answer;
+* **search only the right documents** once the product is known, so answers and
+  citations come from a single correct specification;
+* **know the landscape**, so one product's ratings never leak into another's.
+
+`python scripts/index_documents.py --status` reports catalog coverage and warns
+when new PDFs have been indexed but not yet catalogued.
 
 ### 🌐 Bilingual: Arabic and English
 The documents and questions can be in **Arabic or English**. A multilingual
@@ -28,7 +45,7 @@ not extract well (see Troubleshooting).
 | RAG orchestration | LangChain |
 | Vector database (local, persistent) | ChromaDB |
 | Embeddings (free, local) | Hugging Face `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` |
-| Answer generation | Groq API (`llama-3.3-70b-versatile`) |
+| Answer generation | Google Gemini (`gemini-flash-latest`) — or Groq, via `LLM_PROVIDER` |
 | UI | Streamlit |
 | Config / secrets | python-dotenv (`.env`) |
 
@@ -65,26 +82,40 @@ cd /mnt/c/Users/moham/pdf_agent_v2
 ~/pdf_venv/bin/python -m pip install -r requirements.txt
 ```
 
-### Configure the Groq API key
-1. Get a key at <https://console.groq.com> → **API Keys**.
-2. Open `.env` in the project root and set:
-   ```
-   GROQ_API_KEY=your_real_key
-   ```
-   The `.env` file is git-ignored and is never printed or committed.
+### Configure the answer provider
+The app can use **Google Gemini** (default) or **Groq**. Set it in `.env`:
+
+```
+LLM_PROVIDER=google
+GOOGLE_API_KEY=your_real_key
+GEMINI_MODEL=gemini-flash-latest
+```
+
+* Gemini keys: <https://aistudio.google.com/apikey>
+* Use the rolling `-latest` aliases — pinned versions such as `gemini-2.5-flash`
+  return **404 "no longer available to new users"**, and `gemini-2.0-flash` has a
+  free-tier quota of **0** for new keys.
+* To switch back to Groq: `LLM_PROVIDER=groq` with `GROQ_API_KEY` set.
+
+The `.env` file is git-ignored and the key is never printed or committed.
 
 ---
 
 ## Everyday use
 
 ### 1. Add PDF files (administrator, in Windows)
-Copy approved PDFs into the project's `documents\` folder using **File Explorer**:
+PDFs are organized by **topic** — one subfolder per topic under `data\`. Copy
+approved PDFs into the matching topic folder using **File Explorer**:
 
 ```
-C:\Users\moham\pdf_agent_v2\documents\
+C:\Users\moham\pdf_agent_v2\data\01 - SWITCH BOARD (X) PANELS\...
+C:\Users\moham\pdf_agent_v2\data\08 - TRANSFORMERS\...
+C:\Users\moham\pdf_agent_v2\data\<your topic>\...
 ```
 
-Only the administrator does this. Users never add files.
+Each top-level folder under `data\` becomes a selectable topic in the app. To
+add a new topic, just create a new subfolder and drop its PDFs in. Only the
+administrator does this. Users never add files.
 
 ### 2. Build / update the index (administrator)
 Open **Windows Terminal / PowerShell** and run:
@@ -109,7 +140,9 @@ wsl -d Ubuntu -- bash -lc "cd /mnt/c/Users/moham/pdf_agent_v2 && source ~/pdf_ve
 > log with `torchvision` errors. We don't need hot-reload for normal use.
 
 Then open `http://localhost:8501` in your Windows browser.
-Users just type questions; each answer shows the source filename and page.
+When users open the app they **first choose a topic**, then ask questions —
+each answer is drawn only from that topic's documents and shows the source
+filename and page. A "🔄 Change topic" button in the sidebar switches topics.
 
 > Tip: you can also open the **Ubuntu** terminal directly and run the commands
 > after `bash -lc "…"` without the `wsl -d Ubuntu -- bash -lc` wrapper.
@@ -163,7 +196,10 @@ pdf_agent_v2/
 │   ├── store.py               # Embeddings + Chroma factory
 │   ├── indexer.py             # Chunking + change detection + persistence
 │   └── qa.py                  # Retrieval + Groq + "not found" guard
-├── documents/                 # Admin-only PDFs (git-ignored)
+├── data/                      # Admin-only PDFs, one subfolder per topic (git-ignored)
+│   ├── 01 - SWITCH BOARD (X) PANELS/
+│   ├── 08 - TRANSFORMERS/
+│   └── <topic>/ ...
 ├── vectorstore/               # ChromaDB persistent store (git-ignored)
 ├── requirements.txt
 ├── .env                       # GROQ_API_KEY (git-ignored)
