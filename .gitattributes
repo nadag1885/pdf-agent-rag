@@ -1,0 +1,9 @@
+# Normalise line endings so editing on Windows doesn't rewrite whole files.
+* text=auto eol=lf
+
+# Binary assets: never touch these.
+*.pdf binary
+*.bin binary
+*.sqlite3 binary
+*.png binary
+*.jpg binary

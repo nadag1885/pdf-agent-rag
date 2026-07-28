@@ -5,7 +5,10 @@ api_key.env
 !.env.example
 
 # ---- Vector database (ChromaDB persistent store) ----
-vectorstore/
+# Published so a deployed app can answer immediately without re-indexing.
+# It is built with the LOCAL embedding model; switching EMBEDDING_PROVIDER
+# means rebuilding it, because vector dimensions must match.
+# vectorstore/
 
 # ---- Shared learned-answers store ----
 learned_store/
@@ -13,8 +16,9 @@ learned_store/
 # ---- Approved PDFs (admin-managed, not committed) ----
 documents/*
 !documents/.gitkeep
-# Topic-organized source PDFs (large, admin-managed)
-data/
+# Topic-organized source PDFs are published so the app is self-contained
+# and any host can rebuild the index from scratch.
+# data/
 
 # ---- Python ----
 __pycache__/

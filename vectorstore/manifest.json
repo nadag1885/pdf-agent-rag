@@ -1,0 +1,826 @@
+{
+  "files": {
+    "01 - SWITCH BOARD (X) PANELS/EDMS 01-100-1 - SWITCH BOARD 12KV.pdf": {
+      "hash": "fc44d705bc8b4e0a4fd70c44b1534a0c1a67273e5a7924f0c18e4c1dc8c38353",
+      "chunks": 80,
+      "topic": "01 - SWITCH BOARD (X) PANELS",
+      "source": "EDMS 01-100-1 - SWITCH BOARD 12KV.pdf"
+    },
+    "01 - SWITCH BOARD (X) PANELS/EDMS 01-101-1 - 12KV SWITCH BOARD (X) PANELS.pdf": {
+      "hash": "2d85020d8f4e6f5e14cfe1a10e97720bf1a99a19fe1514f894f85fad5a64d4d1",
+      "chunks": 165,
+      "topic": "01 - SWITCH BOARD (X) PANELS",
+      "source": "EDMS 01-101-1 - 12KV SWITCH BOARD (X) PANELS.pdf"
+    },
+    "01 - SWITCH BOARD (X) PANELS/EDMS 01-200-1 - TECHNICAL SPECIFICATIONS FOR 24 KV SWITCH BOARD.pdf": {
+      "hash": "5c4cd8a349459e2f325fef11dd4716e577598d87bb9c8b8ca3c1054122de1e9c",
+      "chunks": 85,
+      "topic": "01 - SWITCH BOARD (X) PANELS",
+      "source": "EDMS 01-200-1 - TECHNICAL SPECIFICATIONS FOR 24 KV SWITCH BOARD.pdf"
+    },
+    "01 - SWITCH BOARD (X) PANELS/EDMS 01-201-1 - TECHNICAL SPECIFICATIONS FOR 24 KV SWITCH BOARD.pdf": {
+      "hash": "623baaa7e66097c1a05654b0fc873c0b7ee777883ba1326a24dec1cebc0b89bf",
+      "chunks": 149,
+      "topic": "01 - SWITCH BOARD (X) PANELS",
+      "source": "EDMS 01-201-1 - TECHNICAL SPECIFICATIONS FOR 24 KV SWITCH BOARD.pdf"
+    },
+    "01 - SWITCH BOARD (X) PANELS/EDMS 01-202-1 - Technical specification for 24KV MV GIS SWITCHGEAR.pdf": {
+      "hash": "7d27f11d72ea30ab8ff8a598432d2c5131ce392b609cd66cf5f606b41bd6e11e",
+      "chunks": 135,
+      "topic": "01 - SWITCH BOARD (X) PANELS",
+      "source": "EDMS 01-202-1 - Technical specification for 24KV MV GIS SWITCHGEAR.pdf"
+    },
+    "01 - SWITCH BOARD (X) PANELS/EDMS 01-300-1 - Technical specification for MV Primary Switchgear Remote Terminal Unit.pdf": {
+      "hash": "6423bfb9316466aa40b6f08390ba48cea9638efc7c1542f2e9a46f236fc01e0d",
+      "chunks": 95,
+      "topic": "01 - SWITCH BOARD (X) PANELS",
+      "source": "EDMS 01-300-1 - Technical specification for MV Primary Switchgear Remote Terminal Unit.pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-100-1 - 12 K.V. AIR RING MAIN UNITS.pdf": {
+      "hash": "cd45e6416e113575a14fb46e7aec2017d0dda827aad383339ddf745e7f058eae",
+      "chunks": 72,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-100-1 - 12 K.V. AIR RING MAIN UNITS.pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-101-2 - Technical Specification for 12 kV Automated Smart RMU (GIS AIS).pdf": {
+      "hash": "b733fddcd2a127a511125f9dfe710b39d1b6493a1ee71d54654225b8b1ee13a1",
+      "chunks": 176,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-101-2 - Technical Specification for 12 kV Automated Smart RMU (GIS AIS).pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-102-1 - Technical specification for 12 kV Ring Main Unit (GIS AIS).pdf": {
+      "hash": "377eb202fd95b7ef256f4a3b4b3280811ef42d8ccdb33e085b2f4963ae9c9a74",
+      "chunks": 111,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-102-1 - Technical specification for 12 kV Ring Main Unit (GIS AIS).pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-103-1 - Technical specification for 12 kV Non-Motorized Ring Main Unit (GIS AIS).pdf": {
+      "hash": "0605899a20b695f3624566c663fb6ebbc468a457e38c362dff98214ec55253b4",
+      "chunks": 99,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-103-1 - Technical specification for 12 kV Non-Motorized Ring Main Unit (GIS AIS).pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-200-1 - TECHNICAL SPECIFICATION FOR 24 K.V. AIR RING MAIN UNITS.pdf": {
+      "hash": "a4fb872055c811dc3db450ccdd1d1f91edde6c8d084042d51cc6cc2f101fcdd7",
+      "chunks": 72,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-200-1 - TECHNICAL SPECIFICATION FOR 24 K.V. AIR RING MAIN UNITS.pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-201-2 - Technical Specification for 24 kV Automated Smart RMU (GIS AIS).pdf": {
+      "hash": "c299827c655c32441ed3aee5a8088fb776dc33d4e4ee69547ff55dcdf1d3d987",
+      "chunks": 182,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-201-2 - Technical Specification for 24 kV Automated Smart RMU (GIS AIS).pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-202-1 - Technical specification for 24 kV Ring Main Unit (GIS AIS).pdf": {
+      "hash": "774ac37d11e61635c0e2fd7c3302a1cec25a324ec17701b723b888e2f789acca",
+      "chunks": 116,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-202-1 - Technical specification for 24 kV Ring Main Unit (GIS AIS).pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-203-1 - Technical specification for 24 kV Non-Motorized Ring Main Unit (GIS AIS).pdf": {
+      "hash": "a642b04e05aca5baa1e6425af0c5d7768d683dfe15126f76e0654ae9dc376ff1",
+      "chunks": 103,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-203-1 - Technical specification for 24 kV Non-Motorized Ring Main Unit (GIS AIS).pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-300-03 - TECHNICAL SPECIFICATION FOR LOW VOLTAGE DISTRIBUTION PANELS FOR POWER TRANSFORMERS UP TO 4000 KVA (INDOOR OUTDOOR).pdf": {
+      "hash": "4f6f65cbefc2d2729bace52fe8f33af0d35b75dc8ca6cc014b6c07fafee39c49",
+      "chunks": 91,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-300-03 - TECHNICAL SPECIFICATION FOR LOW VOLTAGE DISTRIBUTION PANELS FOR POWER TRANSFORMERS UP TO 4000 KVA (INDOOR OUTDOOR).pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-302-1 - TECHNICAL SPECIFICATION FOR LOW VOLTAGE AUTOMATIC POWER FACTOR CORRECTION PANEL (APFC).pdf": {
+      "hash": "8f1a91314e74b27fc6ccba6cf4f1f13dfd882468374d36f4a767be3e1f1f85b0",
+      "chunks": 93,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-302-1 - TECHNICAL SPECIFICATION FOR LOW VOLTAGE AUTOMATIC POWER FACTOR CORRECTION PANEL (APFC).pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-303-1 - المواصفات الفنية الخاصة لصندوق4460 مصنع من الصاج.pdf": {
+      "hash": "e7b1b468dbc8fc74f2db9c44c464989d677203c614bf905fd31f191d57f848b2",
+      "chunks": 9,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-303-1 - المواصفات الفنية الخاصة لصندوق4460 مصنع من الصاج.pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-304-1 - Technical specification for smart prepaid meter enclosures single phase.pdf": {
+      "hash": "7359b0ef22352a6d7877c6ccacfcceba8b18e8525bb6d67b0f0bb813540fbdc6",
+      "chunks": 18,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-304-1 - Technical specification for smart prepaid meter enclosures single phase.pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-305-1 - Technical specification for smart prepaid meter enclosure direct connection -three phase.pdf": {
+      "hash": "796e742406bb1834698c99c2047d91eb4424bdf4130a3b805dbd59ab5851c1b6",
+      "chunks": 16,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-305-1 - Technical specification for smart prepaid meter enclosure direct connection -three phase.pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-306-1 - SPECIFICATION FOR Enclosures for Energy Meters Grouping Single Three Phase Direct Meters With Indirect Master Meter.pdf": {
+      "hash": "fd344b5e621b4b06acf24e61e2f4ac8645c8310b831aa17bba088b54927ecb4f",
+      "chunks": 43,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-306-1 - SPECIFICATION FOR Enclosures for Energy Meters Grouping Single Three Phase Direct Meters With Indirect Master Meter.pdf"
+    },
+    "02 - RMU &L.V PANELS/EDMS 02-307-1 - TECNNICAL SPECIFICATION FOR LOW VOLTAGE METER PANEL (SMART PREPAID).pdf": {
+      "hash": "227c8d0253d1b34a6e21875b47a6e3be0ee6e4d60e28ade6a8ebb1012bede61c",
+      "chunks": 31,
+      "topic": "02 - RMU &L.V PANELS",
+      "source": "EDMS 02-307-1 - TECNNICAL SPECIFICATION FOR LOW VOLTAGE METER PANEL (SMART PREPAID).pdf"
+    },
+    "03 - MV L.V UNDERGROUND CABLES/EDMS 03-300-2 - SPECIFICATION FOR UNDERGROUND XLPE CABLES 0.6 1(1.2)KV ALUMINUM COPPER, ARMOURED.pdf": {
+      "hash": "93899b892317275e218677a1db74adea2f2313171fc2d2803b9e081a0bf0898e",
+      "chunks": 48,
+      "topic": "03 - MV L.V UNDERGROUND CABLES",
+      "source": "EDMS 03-300-2 - SPECIFICATION FOR UNDERGROUND XLPE CABLES 0.6 1(1.2)KV ALUMINUM COPPER, ARMOURED.pdf"
+    },
+    "03 - MV L.V UNDERGROUND CABLES/EDMS 03-301-1 - SPECIFICATION FOR SINGLE CORE SHEATHED XLPE INSULATED CABLES 0.6 1(1.2) KV ALUMINUM COPPER, ARMOURED AND UNARMOURD.pdf": {
+      "hash": "780190d62fb6b483778d8312ad8ce72962fa6645b678d7a0be1985007acb62cd",
+      "chunks": 45,
+      "topic": "03 - MV L.V UNDERGROUND CABLES",
+      "source": "EDMS 03-301-1 - SPECIFICATION FOR SINGLE CORE SHEATHED XLPE INSULATED CABLES 0.6 1(1.2) KV ALUMINUM COPPER, ARMOURED AND UNARMOURD.pdf"
+    },
+    "03 - MV L.V UNDERGROUND CABLES/EDMS 03-400-2 - TECHNICAL SPECIFICATIONS FOR SUPPLY OF UNDER GROUND THREE CORE MEDIUM VOLTAGE ARMOURED CABLES 12 20 KV & 18 30 KV.pdf": {
+      "hash": "f62383175f04860a7fb7bb0cb760a679d13b1f8e5eaf29c199ddbc242185293d",
+      "chunks": 50,
+      "topic": "03 - MV L.V UNDERGROUND CABLES",
+      "source": "EDMS 03-400-2 - TECHNICAL SPECIFICATIONS FOR SUPPLY OF UNDER GROUND THREE CORE MEDIUM VOLTAGE ARMOURED CABLES 12 20 KV & 18 30 KV.pdf"
+    },
+    "03 - MV L.V UNDERGROUND CABLES/EDMS 03-401-1 - TECHNICAL SPECIFICATIONS FOR SUPPLY OF UNDER GROUND SINGLE CORE MEDIUM VOLTAGE ARMOURED CABLES 12 20 KV & 18 30 KV.pdf": {
+      "hash": "3073e59b7bac3a54eeb4400bb6aac7b021703de9dad95c086c4843608979903d",
+      "chunks": 46,
+      "topic": "03 - MV L.V UNDERGROUND CABLES",
+      "source": "EDMS 03-401-1 - TECHNICAL SPECIFICATIONS FOR SUPPLY OF UNDER GROUND SINGLE CORE MEDIUM VOLTAGE ARMOURED CABLES 12 20 KV & 18 30 KV.pdf"
+    },
+    "03 - MV L.V UNDERGROUND CABLES/EDMS 03-402-1 - SPECIFICATION FOR WATER-TIGHT THREE-CORE CABLES FOR MEDIUM VOLTAGE NETWORKS 12 20 (24 kV) AND 18 30 (36 kV).pdf": {
+      "hash": "2bc23ab9cbaf570712c3279613d7623b88c4df13f6a3e7cc4130a4189507d073",
+      "chunks": 57,
+      "topic": "03 - MV L.V UNDERGROUND CABLES",
+      "source": "EDMS 03-402-1 - SPECIFICATION FOR WATER-TIGHT THREE-CORE CABLES FOR MEDIUM VOLTAGE NETWORKS 12 20 (24 kV) AND 18 30 (36 kV).pdf"
+    },
+    "03 - MV L.V UNDERGROUND CABLES/EDMS 03-403-1 - SPECIFICATION FOR WATER-TIGHT SINGLE-CORE CABLES FOR MEDIUM VOLTAGE NETWORKS 12 20 (24 kV) AND 18 30 (36 kV).pdf": {
+      "hash": "6dcd292914718a0fcf651f6f5a99dd495f1d64418bd0739e667d17e6ba03f0c2",
+      "chunks": 51,
+      "topic": "03 - MV L.V UNDERGROUND CABLES",
+      "source": "EDMS 03-403-1 - SPECIFICATION FOR WATER-TIGHT SINGLE-CORE CABLES FOR MEDIUM VOLTAGE NETWORKS 12 20 (24 kV) AND 18 30 (36 kV).pdf"
+    },
+    "04 - CONDUCTORS/EDMS 04-100 - SPECIFICATION FOR OVERHEAD ALUMINUM CONDUCTORS STEEL REINFORCED (ACSR).pdf": {
+      "hash": "a2adb1364ce0d49e7549a0abb1560f72ddd2de86b107c74ddc0b595e85a2c492",
+      "chunks": 41,
+      "topic": "04 - CONDUCTORS",
+      "source": "EDMS 04-100 - SPECIFICATION FOR OVERHEAD ALUMINUM CONDUCTORS STEEL REINFORCED (ACSR).pdf"
+    },
+    "04 - CONDUCTORS/EDMS 04-101 - SPECIFICATION FOR OVERHEAD ALL ALUMINUM ALLOY CONDUCTORS (AAAC) (1).pdf": {
+      "hash": "bd91918f7c994c39ea92bdb1dea377d2f72e4a3bf83167bf981af91e57b5e57e",
+      "chunks": 39,
+      "topic": "04 - CONDUCTORS",
+      "source": "EDMS 04-101 - SPECIFICATION FOR OVERHEAD ALL ALUMINUM ALLOY CONDUCTORS (AAAC) (1).pdf"
+    },
+    "04 - CONDUCTORS/EDMS 04-300-1 - SPECIFICATION FOR SUPPLY OF LOW VOLTAGE INSULATED CONDUCTORS.pdf": {
+      "hash": "217e5466411a631e5bc38d244c528cdae9d4b259ed0cf8d4a50dce8a03cde8b6",
+      "chunks": 21,
+      "topic": "04 - CONDUCTORS",
+      "source": "EDMS 04-300-1 - SPECIFICATION FOR SUPPLY OF LOW VOLTAGE INSULATED CONDUCTORS.pdf"
+    },
+    "06 - SINGLE CORE PVC INSULATED CABLES WIRES 450 750 V/EDMS 06-300-1 - TECHNICAL SPECIFICATION FOR SINGLE CORE PVC-INSULATED FLEXIBLE NON SHEATHED CABLES (WIRES) OF RATED VOLTAGES U.pdf": {
+      "hash": "21dbf9b52a9b6f3ed8a2c5a6d6a23afc61a682187c2a732f686aa61ed1d688f4",
+      "chunks": 32,
+      "topic": "06 - SINGLE CORE PVC INSULATED CABLES WIRES 450 750 V",
+      "source": "EDMS 06-300-1 - TECHNICAL SPECIFICATION FOR SINGLE CORE PVC-INSULATED FLEXIBLE NON SHEATHED CABLES (WIRES) OF RATED VOLTAGES U.pdf"
+    },
+    "06 - SINGLE CORE PVC INSULATED CABLES WIRES 450 750 V/EDMS 06-301-1 - TECHNICAL SPECIFICATION FOR SINGLE CORE PVC- INSULATED STRANDED NON SHEATHED CABLES (WIRES) OF RATED VOLTAGES.pdf": {
+      "hash": "29c5ad51fb249008195fdb3ebc55548fd84d47e954907601e2c01df3c32b784d",
+      "chunks": 32,
+      "topic": "06 - SINGLE CORE PVC INSULATED CABLES WIRES 450 750 V",
+      "source": "EDMS 06-301-1 - TECHNICAL SPECIFICATION FOR SINGLE CORE PVC- INSULATED STRANDED NON SHEATHED CABLES (WIRES) OF RATED VOLTAGES.pdf"
+    },
+    "07 - KIOSKS/EDMS 07-100-2 - TECHNICAL SPECIFICATIONS FOR DISTRIBUTION KIOSKS 50,63,100,160,200,300,500,800,1000 and 1500KVA 11(10.5) 0.4 K.V.pdf": {
+      "hash": "73e2eb02c92dbe46996f3d47531f0fd0df87c6282285f6a76e9fcb97df1002fb",
+      "chunks": 83,
+      "topic": "07 - KIOSKS",
+      "source": "EDMS 07-100-2 - TECHNICAL SPECIFICATIONS FOR DISTRIBUTION KIOSKS 50,63,100,160,200,300,500,800,1000 and 1500KVA 11(10.5) 0.4 K.V.pdf"
+    },
+    "07 - KIOSKS/EDMS 07-200-2 - TECHNICAL SPECIFICATIONS FOR DISTRIBUTION KIOSKS 50,63,100,160,200,300,500,800,1000 and 1500KVA 22 kV.pdf": {
+      "hash": "10b97229d35870350c1675f079f6e95324fdf1e0af8b191e854b429bf0978110",
+      "chunks": 83,
+      "topic": "07 - KIOSKS",
+      "source": "EDMS 07-200-2 - TECHNICAL SPECIFICATIONS FOR DISTRIBUTION KIOSKS 50,63,100,160,200,300,500,800,1000 and 1500KVA 22 kV.pdf"
+    },
+    "07 - KIOSKS/EDMS 07-400-2 - TECHNICAL SPECIFICATIONS FOR DISTRIBUTION KIOSKS (GRP) 100, 160, 200, 300, 500, 800, 1000 AND 1500 KVA 22-(10.5) 0.4 KV.pdf": {
+      "hash": "af2446641d0f8b8b2644a25a70b5718684ecd71f059f427238738735ade55178",
+      "chunks": 79,
+      "topic": "07 - KIOSKS",
+      "source": "EDMS 07-400-2 - TECHNICAL SPECIFICATIONS FOR DISTRIBUTION KIOSKS (GRP) 100, 160, 200, 300, 500, 800, 1000 AND 1500 KVA 22-(10.5) 0.4 KV.pdf"
+    },
+    "08 - TRANSFORMERS/EDMS 08-100-5 - SPECIFICATION FOR OIL-IMMERSED DISTRIBUTION TRANSFORMERS FROM 25 kVA UP TO 5000 kVA 10.5 - 11 0.4 kV.pdf": {
+      "hash": "0eaee7e95fabb21a5c54ce4441fecc0a1306aadef572b2abf5b85479d66f6afd",
+      "chunks": 66,
+      "topic": "08 - TRANSFORMERS",
+      "source": "EDMS 08-100-5 - SPECIFICATION FOR OIL-IMMERSED DISTRIBUTION TRANSFORMERS FROM 25 kVA UP TO 5000 kVA 10.5 - 11 0.4 kV.pdf"
+    },
+    "08 - TRANSFORMERS/EDMS 08-101-3 - SPECIFICATION FOR DRY-TYPE DISTRIBUTION TRANSFORMERS FROM 50 kVA UP TO 5000 kVA 10.5 – 11 0.4 kV EPOXY SOLID-CAST CAST RESIN COIL.pdf": {
+      "hash": "95d505c1408da167e8ae2c55f20c6a2ae45ba0d102c84feb30a0a80febed84b6",
+      "chunks": 79,
+      "topic": "08 - TRANSFORMERS",
+      "source": "EDMS 08-101-3 - SPECIFICATION FOR DRY-TYPE DISTRIBUTION TRANSFORMERS FROM 50 kVA UP TO 5000 kVA 10.5 – 11 0.4 kV EPOXY SOLID-CAST CAST RESIN COIL.pdf"
+    },
+    "08 - TRANSFORMERS/EDMS 08-102-2 - TECHNICAL SPECIFICATION FOR EPOXY SOLID-CAST VPE OR CAST COIL DRY - TYPE DISTRIBUTION TRANSFORMERs 10.5-11 0.4 KV 50 KVA up to 5000 KV.pdf": {
+      "hash": "2ad9a86f8b64777ffbd73acbbafaaeffcaffb29d4d747a8dad4fc53081e10f93",
+      "chunks": 85,
+      "topic": "08 - TRANSFORMERS",
+      "source": "EDMS 08-102-2 - TECHNICAL SPECIFICATION FOR EPOXY SOLID-CAST VPE OR CAST COIL DRY - TYPE DISTRIBUTION TRANSFORMERs 10.5-11 0.4 KV 50 KVA up to 5000 KV.pdf"
+    },
+    "08 - TRANSFORMERS/EDMS 08-103-1 - TECHNICAL SPECIFICATION FOR CAST PRE-IMPREGNATED DRY - TYPE DISTRIBUTION TRANSFORMERS 10.5-11 0.4 KV 50 KVA up to 5000 KVA.pdf": {
+      "hash": "abd2c540f0c0cd6c78b41c9949380de654d3e9e6f176d7dd0bb76c7b506cb68f",
+      "chunks": 85,
+      "topic": "08 - TRANSFORMERS",
+      "source": "EDMS 08-103-1 - TECHNICAL SPECIFICATION FOR CAST PRE-IMPREGNATED DRY - TYPE DISTRIBUTION TRANSFORMERS 10.5-11 0.4 KV 50 KVA up to 5000 KVA.pdf"
+    },
+    "08 - TRANSFORMERS/EDMS 08-200-5 - SPECIFICATION FOR OIL-IMMERSED DISTRIBUTION TRANSFORMERS FROM 25 kVA UP TO 5000 kVA 22 0.4 kV.pdf": {
+      "hash": "fe0d5d265ae5d5b1d89edc22a8c31896cca7c1e7658558af4bc1c99f56ca3ac2",
+      "chunks": 66,
+      "topic": "08 - TRANSFORMERS",
+      "source": "EDMS 08-200-5 - SPECIFICATION FOR OIL-IMMERSED DISTRIBUTION TRANSFORMERS FROM 25 kVA UP TO 5000 kVA 22 0.4 kV.pdf"
+    },
+    "08 - TRANSFORMERS/EDMS 08-201-3 - SPECIFICATION FOR DRY-TYPE DISTRIBUTION TRANSFORMERS FROM 50 kVA UP TO 5000 kVA 22 0.4 kV EPOXY SOLID-CAST CAST RESIN COIL.pdf": {
+      "hash": "e9ee01f939af92d9b400257db7d186d016721de208dc955da2c25c6e80bbab28",
+      "chunks": 79,
+      "topic": "08 - TRANSFORMERS",
+      "source": "EDMS 08-201-3 - SPECIFICATION FOR DRY-TYPE DISTRIBUTION TRANSFORMERS FROM 50 kVA UP TO 5000 kVA 22 0.4 kV EPOXY SOLID-CAST CAST RESIN COIL.pdf"
+    },
+    "08 - TRANSFORMERS/EDMS 08-400-02 - SPECIFICATION FOR Oil Immersed Coupling Power Transformers.pdf": {
+      "hash": "123f4671614e93eda24601ba77fa0599fc750f2576dad8e8f2ca749cd9b47130",
+      "chunks": 62,
+      "topic": "08 - TRANSFORMERS",
+      "source": "EDMS 08-400-02 - SPECIFICATION FOR Oil Immersed Coupling Power Transformers.pdf"
+    },
+    "09 - POLES &TOWERS/EDMS 09 – 402 – 1 - SPECIFICATION F Tension and suspension poles made of fiber seated for use in Medium voltage electricity networks 11 and 22 kV ).pdf": {
+      "hash": "60ea7ccb23701b8d1ff19b800dbfec1fa61e3732ed8b5f6a4ef5a53f9702a776",
+      "chunks": 19,
+      "topic": "09 - POLES &TOWERS",
+      "source": "EDMS 09 – 402 – 1 - SPECIFICATION F Tension and suspension poles made of fiber seated for use in Medium voltage electricity networks 11 and 22 kV ).pdf"
+    },
+    "09 - POLES &TOWERS/EDMS 09-300-2 - SPECIFICATION FOR L.V PIPE POLES.pdf": {
+      "hash": "3021c389a3c1df444457a2e27fbf9421f3f63aec350a7c0b22e92ca496a218f4",
+      "chunks": 35,
+      "topic": "09 - POLES &TOWERS",
+      "source": "EDMS 09-300-2 - SPECIFICATION FOR L.V PIPE POLES.pdf"
+    },
+    "09 - POLES &TOWERS/EDMS 09-301-1 - SPECIFICATION FOR Conical Steel Poles For Street Lighting.pdf": {
+      "hash": "5da3d60a0a53a3de80ca04ff073cc4bfe4c49ec751bda46fa89a9a1fa2ca56d7",
+      "chunks": 35,
+      "topic": "09 - POLES &TOWERS",
+      "source": "EDMS 09-301-1 - SPECIFICATION FOR Conical Steel Poles For Street Lighting.pdf"
+    },
+    "09 - POLES &TOWERS/EDMS 09-400-3 - SPECIFICATION FOR Galvanized Lattice Towers (Tension - Suspension - Crossing) For MV Networks up to 22 kV.pdf": {
+      "hash": "3fa241838243a25c1d854011d8ba288c53f1dbfc269a35d28181496f2959b5f4",
+      "chunks": 44,
+      "topic": "09 - POLES &TOWERS",
+      "source": "EDMS 09-400-3 - SPECIFICATION FOR Galvanized Lattice Towers (Tension - Suspension - Crossing) For MV Networks up to 22 kV.pdf"
+    },
+    "09 - POLES &TOWERS/EDMS 09-401-1 - SPECIFICATION FOR MEDIUM VOLTAGE SUSPENSION GALVANIZED PIPE POLES.pdf": {
+      "hash": "dc446a5c3c970ff03e82c5c956a4e371e7f56886bf7984fd22e3d7012e01432e",
+      "chunks": 18,
+      "topic": "09 - POLES &TOWERS",
+      "source": "EDMS 09-401-1 - SPECIFICATION FOR MEDIUM VOLTAGE SUSPENSION GALVANIZED PIPE POLES.pdf"
+    },
+    "09 - POLES &TOWERS/EDMS 09-403-1 - TECHNICAL SPECIFICATION FOR Lattice Towers Double Circuit (Tension - Suspension - Crossing) For MV Networks up to 22 kV المواصفات الفن.pdf": {
+      "hash": "e1e737d4a9aca95f5c0eb54151dd5820731050a074c209f670379267cb3d9d0e",
+      "chunks": 32,
+      "topic": "09 - POLES &TOWERS",
+      "source": "EDMS 09-403-1 - TECHNICAL SPECIFICATION FOR Lattice Towers Double Circuit (Tension - Suspension - Crossing) For MV Networks up to 22 kV المواصفات الفن.pdf"
+    },
+    "10 - INSULATORS/EDMS 10-100-2 - SPECIFICATION FOR MEDIUM VOLTAGE PIN INSULATORS TYPE 11KV.pdf": {
+      "hash": "1081171a83e54a96c679e945b9e478ae51c720037f05ddbd584a07c8555f467f",
+      "chunks": 25,
+      "topic": "10 - INSULATORS",
+      "source": "EDMS 10-100-2 - SPECIFICATION FOR MEDIUM VOLTAGE PIN INSULATORS TYPE 11KV.pdf"
+    },
+    "10 - INSULATORS/EDMS 10-200-2 - SPECIFICATION FOR PIN-TYPE PORCELAIN INSULATOR 22 kV.pdf": {
+      "hash": "c9296f1631e55872b2d8265cf5e45d7e7aa500d8c5da0ad84deb0db97ddce6f1",
+      "chunks": 25,
+      "topic": "10 - INSULATORS",
+      "source": "EDMS 10-200-2 - SPECIFICATION FOR PIN-TYPE PORCELAIN INSULATOR 22 kV.pdf"
+    },
+    "10 - INSULATORS/EDMS 10-300-1 - TECHNICAL SPECIFICATION OF LOW VOLTAGE PIN INSULATORS.pdf": {
+      "hash": "a7ed7bdbbe086130ab1f0468482fe21e58751418a6a5df94e98d4d6b851ce477",
+      "chunks": 30,
+      "topic": "10 - INSULATORS",
+      "source": "EDMS 10-300-1 - TECHNICAL SPECIFICATION OF LOW VOLTAGE PIN INSULATORS.pdf"
+    },
+    "10 - INSULATORS/EDMS 10-400-1 - SPECIFICATION FOR Supply of the medium Voltage Disc Porcelain Insulators Anti-Fog Type.pdf": {
+      "hash": "edc87e2704b138a8ebd23679940b71545f465bf988ad7f03d072af3d4d755ed4",
+      "chunks": 24,
+      "topic": "10 - INSULATORS",
+      "source": "EDMS 10-400-1 - SPECIFICATION FOR Supply of the medium Voltage Disc Porcelain Insulators Anti-Fog Type.pdf"
+    },
+    "10 - INSULATORS/EDMS 10-401-1 - SPECIFICATION FOR Supply of the medium Voltage Disc Porcelain Insulators Normal Type.pdf": {
+      "hash": "5db7be7a935bc0ea7104f1cf5e03764fd461cdee7abe30f94e2146518865f3b7",
+      "chunks": 27,
+      "topic": "10 - INSULATORS",
+      "source": "EDMS 10-401-1 - SPECIFICATION FOR Supply of the medium Voltage Disc Porcelain Insulators Normal Type.pdf"
+    },
+    "10 - INSULATORS/EDMS 10-402-1 - SPECIFICATION FOR LONG-ROD TENSION-TYPE POLYMER INSULATOR.pdf": {
+      "hash": "4c141e9fab324a4f97a4ad55f6d1929b785107afaea0d946376c6a34d4096772",
+      "chunks": 41,
+      "topic": "10 - INSULATORS",
+      "source": "EDMS 10-402-1 - SPECIFICATION FOR LONG-ROD TENSION-TYPE POLYMER INSULATOR.pdf"
+    },
+    "10 - INSULATORS/EDMS 10-403-1 - SPECIFICATION FOR PIN-TYPE POLYMER INSULATOR.pdf": {
+      "hash": "bc20d663763d763f42c1f6bdec563a0e37dfc6d15379cd44350b27684feba9ff",
+      "chunks": 38,
+      "topic": "10 - INSULATORS",
+      "source": "EDMS 10-403-1 - SPECIFICATION FOR PIN-TYPE POLYMER INSULATOR.pdf"
+    },
+    "11 - SURGE ARRESTER/EDMS 11-400-1 - SPECIFICATION FOR DISTRIBUTION SURGE ARRESTER (INDOOR – OUTDOOR) 12 & 24 kV.pdf": {
+      "hash": "a48c983601dd8898ff206a6183eb96d21d4782ce6427c7c075aaea4627877e20",
+      "chunks": 32,
+      "topic": "11 - SURGE ARRESTER",
+      "source": "EDMS 11-400-1 - SPECIFICATION FOR DISTRIBUTION SURGE ARRESTER (INDOOR – OUTDOOR) 12 & 24 kV.pdf"
+    },
+    "12 - VOLTAGE REGULATORS/EDMS 12-400-1 - SPECIFICATION FOR THREE PHASE )LOW- LOSSES( AUTOTRANSFORMER UP TO 24 kV WITH ON LOAD TAP CHANGER.pdf": {
+      "hash": "87e93cf03fe8a2414eb5b0712f2e685b54f224e6db3b07eb12d0868227385ad0",
+      "chunks": 65,
+      "topic": "12 - VOLTAGE REGULATORS",
+      "source": "EDMS 12-400-1 - SPECIFICATION FOR THREE PHASE )LOW- LOSSES( AUTOTRANSFORMER UP TO 24 kV WITH ON LOAD TAP CHANGER.pdf"
+    },
+    "12 - VOLTAGE REGULATORS/EDMS 12-401-3 - SPECIFICATION FOR STEP VOLTAGE REGULATORS FOR MV NETWORKS UP TO 24 kV.pdf": {
+      "hash": "cfec24276e6b5446eb84aa36833c93a679a29cbf04a57d305443570a6cb99d52",
+      "chunks": 102,
+      "topic": "12 - VOLTAGE REGULATORS",
+      "source": "EDMS 12-401-3 - SPECIFICATION FOR STEP VOLTAGE REGULATORS FOR MV NETWORKS UP TO 24 kV.pdf"
+    },
+    "13 - TERMINATIONS/EDMS 13-100-3 - SPECIFICATION FOR CABLE TERMINATIONS FOR XLPE INSULATED CABLES 12 20 (24) KV (INDOR OUTDOOR).pdf": {
+      "hash": "99874efa8855547923fde9d0762883ef34172592db9328c7f0429dc473bd9553",
+      "chunks": 88,
+      "topic": "13 - TERMINATIONS",
+      "source": "EDMS 13-100-3 - SPECIFICATION FOR CABLE TERMINATIONS FOR XLPE INSULATED CABLES 12 20 (24) KV (INDOR OUTDOOR).pdf"
+    },
+    "13 - TERMINATIONS/EDMS 13-101-2 - SPECIFICATION FOR DEADBREAK ELBOW 12 20 (24 kV) (SCREENED SEPARABLE INSULATED CONNECTOR FOR XLPE-INSULATED CABLES).pdf": {
+      "hash": "1a041c32df30f66fe9013ad1c8ae1712becd77a2ccfa806151c9d9c916ed8524",
+      "chunks": 87,
+      "topic": "13 - TERMINATIONS",
+      "source": "EDMS 13-101-2 - SPECIFICATION FOR DEADBREAK ELBOW 12 20 (24 kV) (SCREENED SEPARABLE INSULATED CONNECTOR FOR XLPE-INSULATED CABLES).pdf"
+    },
+    "13 - TERMINATIONS/EDMS 13-200-3 - SPECIFICATION FOR CABLE TERMINATIONS FOR XLPE INSULATED CABLES 18 30 (36) KV (INDOR OUTDOOR).pdf": {
+      "hash": "6f9f3b98edba2ca55c413653fabe9af351555639f630e51cf2ebf0ee9d1e4035",
+      "chunks": 85,
+      "topic": "13 - TERMINATIONS",
+      "source": "EDMS 13-200-3 - SPECIFICATION FOR CABLE TERMINATIONS FOR XLPE INSULATED CABLES 18 30 (36) KV (INDOR OUTDOOR).pdf"
+    },
+    "13 - TERMINATIONS/EDMS 13-201-2 - SPECIFICATION FOR DEADBREAK ELBOW 18 30 (36 kV) (SCREENED SEPARABLE INSULATED CONNECTOR FOR XLPE-INSULATED CABLES).pdf": {
+      "hash": "a130b099730cf3e6c25a3c4e9577ad70f036436aa59f2bc9ccf49d4f5cf94971",
+      "chunks": 87,
+      "topic": "13 - TERMINATIONS",
+      "source": "EDMS 13-201-2 - SPECIFICATION FOR DEADBREAK ELBOW 18 30 (36 kV) (SCREENED SEPARABLE INSULATED CONNECTOR FOR XLPE-INSULATED CABLES).pdf"
+    },
+    "14 - JOINTS/EDMS 14-100-2 - pg. 1 EDMS 14-100-2 SPECIFICATION FOR CABLE JOINTS FOR XLPE INSULATED CABLES 12 20 (24) kV (ARMOURED AND NON ARMOURED).pdf": {
+      "hash": "c7a4772696c27ff45b58c30ad1443a36a860f0ba457a2d3a866a1b0fc3434775",
+      "chunks": 95,
+      "topic": "14 - JOINTS",
+      "source": "EDMS 14-100-2 - pg. 1 EDMS 14-100-2 SPECIFICATION FOR CABLE JOINTS FOR XLPE INSULATED CABLES 12 20 (24) kV (ARMOURED AND NON ARMOURED).pdf"
+    },
+    "14 - JOINTS/EDMS 14-200-2 - SPECIFICATION FOR CABLE JOINTS FOR XLPE INSULATED CABLES 18 30 (36) kV (ARMOURED AND NON ARMOURED).pdf": {
+      "hash": "7fab25b8f7e892c4cf2f415e958df077f265671954027295a1d53eb599cbe574",
+      "chunks": 94,
+      "topic": "14 - JOINTS",
+      "source": "EDMS 14-200-2 - SPECIFICATION FOR CABLE JOINTS FOR XLPE INSULATED CABLES 18 30 (36) kV (ARMOURED AND NON ARMOURED).pdf"
+    },
+    "14 - JOINTS/EDMS 14-300-1 - TECHNICAL SPECIFICATIONS FOR LOW VOLTAGE HEAT SHRINKABLE CABLE JOINTS 0.6 1(1.2) kV.pdf": {
+      "hash": "07a3750751d688802876c1f2be90bad7a4ae9488bd5001ae9f0f9e16de696c54",
+      "chunks": 45,
+      "topic": "14 - JOINTS",
+      "source": "EDMS 14-300-1 - TECHNICAL SPECIFICATIONS FOR LOW VOLTAGE HEAT SHRINKABLE CABLE JOINTS 0.6 1(1.2) kV.pdf"
+    },
+    "15 - LUGS&BTS/EDMS 15-300-4 - SPECIFICATION FOR COMPRESSION TYPE LUGS FOR CABLES UP TO 24 kV (ALUMINUM COPPER BI-METALLIC).pdf": {
+      "hash": "98b6da2e8d96e303cea6f2efa20a74a1776f9c71142c5fcdae0901a670559430",
+      "chunks": 53,
+      "topic": "15 - LUGS&BTS",
+      "source": "EDMS 15-300-4 - SPECIFICATION FOR COMPRESSION TYPE LUGS FOR CABLES UP TO 24 kV (ALUMINUM COPPER BI-METALLIC).pdf"
+    },
+    "15 - LUGS&BTS/EDMS 15-301-2 - SPECIFICATION FOR COMPRESSION TYPE CONNECTORS For CABLES UP TO 24 kV (ALUMINUM COPPER).pdf": {
+      "hash": "87b6b0c3bea2f701ba1b0773d07a74f60ae45bf9f0ffdd72ba72d17479e99ba8",
+      "chunks": 30,
+      "topic": "15 - LUGS&BTS",
+      "source": "EDMS 15-301-2 - SPECIFICATION FOR COMPRESSION TYPE CONNECTORS For CABLES UP TO 24 kV (ALUMINUM COPPER).pdf"
+    },
+    "15 - LUGS&BTS/EDMS 15-302-2 - Technical specification for Bus Trunking System.pdf": {
+      "hash": "39f98066b94aefa072f39308060c5c931654e04bb9440c613b40670ee524d997",
+      "chunks": 51,
+      "topic": "15 - LUGS&BTS",
+      "source": "EDMS 15-302-2 - Technical specification for Bus Trunking System.pdf"
+    },
+    "17 - CURRENT &VOLTAGE TRANSFORMERS/EDMS 17-300-1 - TECHNICAL SPECIFICATION FOR LOW VOLTAGE CURRENT TRANSFORMERS.pdf": {
+      "hash": "2dc08476e9508c3c6cee8ad05a0c9c14c41ba38b4a62087c18c1d35b4208f339",
+      "chunks": 19,
+      "topic": "17 - CURRENT &VOLTAGE TRANSFORMERS",
+      "source": "EDMS 17-300-1 - TECHNICAL SPECIFICATION FOR LOW VOLTAGE CURRENT TRANSFORMERS.pdf"
+    },
+    "17 - CURRENT &VOLTAGE TRANSFORMERS/EDMS 17-400-2 - TECHNICAL SPECIFICATION FOR MEDUIM VOLTAGE CURRENT TRANSFORMERS.pdf": {
+      "hash": "9c916bf589eb2150fb878ebbbf0cc188c5066506752a127110f739ecf9335fa7",
+      "chunks": 21,
+      "topic": "17 - CURRENT &VOLTAGE TRANSFORMERS",
+      "source": "EDMS 17-400-2 - TECHNICAL SPECIFICATION FOR MEDUIM VOLTAGE CURRENT TRANSFORMERS.pdf"
+    },
+    "17 - CURRENT &VOLTAGE TRANSFORMERS/EDMS 17-401-2 - TECHNICAL SPECIFICATION FOR M.V. VOLTAGE TRANSFRMERS.pdf": {
+      "hash": "10e0388ab476248f01d1a0cf802ec163e1b8c7acf140059d957dd67136c125ce",
+      "chunks": 18,
+      "topic": "17 - CURRENT &VOLTAGE TRANSFORMERS",
+      "source": "EDMS 17-401-2 - TECHNICAL SPECIFICATION FOR M.V. VOLTAGE TRANSFRMERS.pdf"
+    },
+    "18 - ACCESSORIES/EDMS 18- 400 - 2 - SPECIFICATION FOR Tension set assembly For M.V. overhead network ( 4 - BOLT TYPE).pdf": {
+      "hash": "a83a7a27fd759c0b11c5e9d6fae0c530d41d5c9348ac5ee1dda788bcf4d4557a",
+      "chunks": 10,
+      "topic": "18 - ACCESSORIES",
+      "source": "EDMS 18- 400 - 2 - SPECIFICATION FOR Tension set assembly For M.V. overhead network ( 4 - BOLT TYPE).pdf"
+    },
+    "18 - ACCESSORIES/EDMS 18- 401 - 1 - 401 - 2 SPECIFICATION FOR Tension set assembly For M.V. overhead network ( 3 - BOLT TYPE).pdf": {
+      "hash": "ec337e8b191e1387006966c6d019348ffff9b18a149a8a6b0fe4b3e83eed1d26",
+      "chunks": 10,
+      "topic": "18 - ACCESSORIES",
+      "source": "EDMS 18- 401 - 1 - 401 - 2 SPECIFICATION FOR Tension set assembly For M.V. overhead network ( 3 - BOLT TYPE).pdf"
+    },
+    "18 - ACCESSORIES/EDMS 18-301-1 - SPECIFICATION FOR Low voltage insulation fittings.pdf": {
+      "hash": "196a7151104a2723378b131a7c374892d9a23bb1ae18c7149a1858e8162bc4be",
+      "chunks": 28,
+      "topic": "18 - ACCESSORIES",
+      "source": "EDMS 18-301-1 - SPECIFICATION FOR Low voltage insulation fittings.pdf"
+    },
+    "18 - ACCESSORIES/EDMS 18-402-1 - SPECIFICATION FOR OVER-HEAD ACCESSORIES OF BARE CONDUCTORS.pdf": {
+      "hash": "59aea0608d96f8986fbda67311c7ee5be1636ff1b86b3ec07de3e68c26bda7b3",
+      "chunks": 36,
+      "topic": "18 - ACCESSORIES",
+      "source": "EDMS 18-402-1 - SPECIFICATION FOR OVER-HEAD ACCESSORIES OF BARE CONDUCTORS.pdf"
+    },
+    "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES/EDMS 19 – 401 - 1 - TECHNICAL SPECIFICATION FOR THREE PHASE OUTDOOR 12KV &24 KV VACUUM AUTOMATIC CIRCUIT RECLOSERS.pdf": {
+      "hash": "7b3012a9ea73799415d3196fc9709a3919ac8958c9412d24759b5d7e85e0377f",
+      "chunks": 96,
+      "topic": "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES",
+      "source": "EDMS 19 – 401 - 1 - TECHNICAL SPECIFICATION FOR THREE PHASE OUTDOOR 12KV &24 KV VACUUM AUTOMATIC CIRCUIT RECLOSERS.pdf"
+    },
+    "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES/EDMS 19-300-1 - SPECIFICATION FOR LOW VOLTAGE 500 V- H.R.C FUSE LINKS 100 A, 160 A, 250 A, 400 A, 630 A.pdf": {
+      "hash": "bfcbe26fd4489b2e393dc1284d9d13452f25200c689698b1dd6b0978a091928a",
+      "chunks": 16,
+      "topic": "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES",
+      "source": "EDMS 19-300-1 - SPECIFICATION FOR LOW VOLTAGE 500 V- H.R.C FUSE LINKS 100 A, 160 A, 250 A, 400 A, 630 A.pdf"
+    },
+    "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES/EDMS 19-301-1 - SPECIFICATIONS for 500 v fuse- bases (holders) 100 A, 160 A, 250 A, 400 A, 630 A.pdf": {
+      "hash": "0e1b85de626829ada48a0a6d85c72946dff8fba890ca7d96b2164f0766ec90da",
+      "chunks": 13,
+      "topic": "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES",
+      "source": "EDMS 19-301-1 - SPECIFICATIONS for 500 v fuse- bases (holders) 100 A, 160 A, 250 A, 400 A, 630 A.pdf"
+    },
+    "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES/EDMS 19-302-2 - SPECIFICATION FOR LOW VOLTAGE 3Ph. 630A, SIZE 3 VERTICAL FUSE-SWITCH- DISCONNECTOR.pdf": {
+      "hash": "c9eb748e5a3218682b8d89fee85de5d1a42a9c6f7215969ad7cd97a83ddbb469",
+      "chunks": 32,
+      "topic": "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES",
+      "source": "EDMS 19-302-2 - SPECIFICATION FOR LOW VOLTAGE 3Ph. 630A, SIZE 3 VERTICAL FUSE-SWITCH- DISCONNECTOR.pdf"
+    },
+    "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES/EDMS 19-303-1 - SPECIFICATION FOR LOW VOLTAGE CIRCUIT BREAKERS UP TO 6300A.pdf": {
+      "hash": "811d38aa8aedd63a842c43fc585ca668b232d0d44db134eeda9b22c5de32dc77",
+      "chunks": 30,
+      "topic": "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES",
+      "source": "EDMS 19-303-1 - SPECIFICATION FOR LOW VOLTAGE CIRCUIT BREAKERS UP TO 6300A.pdf"
+    },
+    "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES/EDMS 19-304-1 - SPECIFICATION FOR MINIATURE CIRCUIT BREAKERS (MCBs).pdf": {
+      "hash": "592e3074c26966dd73fed3d427bbb5ef8c7c66f6ac810fc34cbb23d6002144ee",
+      "chunks": 35,
+      "topic": "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES",
+      "source": "EDMS 19-304-1 - SPECIFICATION FOR MINIATURE CIRCUIT BREAKERS (MCBs).pdf"
+    },
+    "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES/EDMS 19-400-2 - TECHNICAL SPECIFICATION FOR High Rupture Capacity MV Current limiting Fuses (HRC) 12KV &24 KV (1).pdf": {
+      "hash": "3f4efee51ca10a1de4df57c19d2c7720fb07fc4498e3abfd0bfed8ea7589bf96",
+      "chunks": 42,
+      "topic": "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES",
+      "source": "EDMS 19-400-2 - TECHNICAL SPECIFICATION FOR High Rupture Capacity MV Current limiting Fuses (HRC) 12KV &24 KV (1).pdf"
+    },
+    "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES/EDMS 19-402-1 - Technical Specifications For MV Dropout Fuse Cutouts 94 & 42 kV (D.O.F).pdf": {
+      "hash": "d9d4e11469f4186202cfbe3c02559e8592a65e355726909cc4a837ff68a4cd65",
+      "chunks": 44,
+      "topic": "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES",
+      "source": "EDMS 19-402-1 - Technical Specifications For MV Dropout Fuse Cutouts 94 & 42 kV (D.O.F).pdf"
+    },
+    "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES/EDMS 19-403-1 - TECHNICAL SPECIFICATION FOR 11kV & 22kV, (3) POLE AIR DISCONNECTOR SWITCH (200,400,630A).pdf": {
+      "hash": "431b820a1118f29d6aa461929b8c0eebd8a0ffe070d0ae738d8516365efb15b7",
+      "chunks": 36,
+      "topic": "19 - LOW VOLTAGE CIRCUIT BREAKER AND FUSES",
+      "source": "EDMS 19-403-1 - TECHNICAL SPECIFICATION FOR 11kV & 22kV, (3) POLE AIR DISCONNECTOR SWITCH (200,400,630A).pdf"
+    },
+    "20 - METERS/EDMS 20-300-1 - TECHNICAL SPECIFICATIONS FOR SINGLE- PHASE-PREPAID KWH DIGITAL METERS.pdf": {
+      "hash": "f7382acb45b13f6b8f6bb5eaa84ab3ccb15bcb3f5bb28ca8913e50b1e873b7e6",
+      "chunks": 65,
+      "topic": "20 - METERS",
+      "source": "EDMS 20-300-1 - TECHNICAL SPECIFICATIONS FOR SINGLE- PHASE-PREPAID KWH DIGITAL METERS.pdf"
+    },
+    "20 - METERS/EDMS 20-301-1 - TECHNICAL SPECIFICATIONS FOR THREE PHASE PREPAID KWH DIGITAL METERS.pdf": {
+      "hash": "5a4475f0dbeccb3c48b7494c88bd17c8df25848a55e16e867793dec73b765f29",
+      "chunks": 61,
+      "topic": "20 - METERS",
+      "source": "EDMS 20-301-1 - TECHNICAL SPECIFICATIONS FOR THREE PHASE PREPAID KWH DIGITAL METERS.pdf"
+    },
+    "20 - METERS/EDMS 20-303-2 - TECHNICAL SPECIFICATION FOR SINGLE PHASE DIRECT SMART METER.pdf": {
+      "hash": "8673902af6429161d82d28eb822e5e65bb894ea0e5c98dcce251d25ea603d591",
+      "chunks": 79,
+      "topic": "20 - METERS",
+      "source": "EDMS 20-303-2 - TECHNICAL SPECIFICATION FOR SINGLE PHASE DIRECT SMART METER.pdf"
+    },
+    "20 - METERS/EDMS 20-304-2 - TECHNICAL SPECIFICATION FOR THREE PHASE DIRECT SMART METER.pdf": {
+      "hash": "8805172f5de13876fa0dbbc76c3d6a49952c3b36490df66a7ed91808aca9bb7d",
+      "chunks": 81,
+      "topic": "20 - METERS",
+      "source": "EDMS 20-304-2 - TECHNICAL SPECIFICATION FOR THREE PHASE DIRECT SMART METER.pdf"
+    },
+    "20 - METERS/EDMS 20-305-2 - SPECIFICATION FOR THREE-PHASE INDIRECT SMART METER.pdf": {
+      "hash": "e7e3118830db09f8635b14af1fedb59a0269ac154e7fe616eaf059e31df3f5be",
+      "chunks": 66,
+      "topic": "20 - METERS",
+      "source": "EDMS 20-305-2 - SPECIFICATION FOR THREE-PHASE INDIRECT SMART METER.pdf"
+    },
+    "20 - METERS/EDMS 20-306-1 - TECHNICAL SPECIFICATION FOR THREE PHASE BULK SMART METER.pdf": {
+      "hash": "cf3f22e40487161a1b2f6f66a473deb1345bc5c38681190d9ee3459d22ae00f7",
+      "chunks": 64,
+      "topic": "20 - METERS",
+      "source": "EDMS 20-306-1 - TECHNICAL SPECIFICATION FOR THREE PHASE BULK SMART METER.pdf"
+    },
+    "20 - METERS/EDMS 20-307-04 - دليل إختباراث العداداث اإللكترونيه أحاديه الىجه مسبقه الدفع.pdf": {
+      "hash": "ffca84f6b2e5b7173d6b74838c24b634b69ff26dfce1ab0cbaeef6085f7fccf3",
+      "chunks": 118,
+      "topic": "20 - METERS",
+      "source": "EDMS 20-307-04 - دليل إختباراث العداداث اإللكترونيه أحاديه الىجه مسبقه الدفع.pdf"
+    },
+    "20 - METERS/EDMS 20-401-1 - TECHNICAL SPECIFICATION FOR MEDUIM VOLTAGE SMART METER.pdf": {
+      "hash": "a8fb38e1e47778a0d466bb5ae103b1007aa701a25ffe5fc91cf93cb65796165c",
+      "chunks": 75,
+      "topic": "20 - METERS",
+      "source": "EDMS 20-401-1 - TECHNICAL SPECIFICATION FOR MEDUIM VOLTAGE SMART METER.pdf"
+    },
+    "20 - METERS/EDMS 20-402-2 - SPECIFICATION FOR Meter Enclosures.pdf": {
+      "hash": "e3a8b96b60b6b05cbd558ec9d52c471e1ae2fb7e8f4f734a033e306c83699410",
+      "chunks": 10,
+      "topic": "20 - METERS",
+      "source": "EDMS 20-402-2 - SPECIFICATION FOR Meter Enclosures.pdf"
+    },
+    "20 - METERS/EDMS 20-500-1 - TECHNICAL SPECIFICATION FOR HEAD END SYSTEM.pdf": {
+      "hash": "b3319b3c4f199f3203ae068fa8d2fcbff2947fd270ea806a2ff3c439e8488def",
+      "chunks": 20,
+      "topic": "20 - METERS",
+      "source": "EDMS 20-500-1 - TECHNICAL SPECIFICATION FOR HEAD END SYSTEM.pdf"
+    },
+    "20 - METERS/EDMS 20-501-2 - TECHNICAL SPECIFICATION FOR DATA CONCENTRATOR.pdf": {
+      "hash": "03ae81d5b27c5e86ea9dbbb3ffed2f031dc8b5e37d6667f774b09a6167c9b829",
+      "chunks": 26,
+      "topic": "20 - METERS",
+      "source": "EDMS 20-501-2 - TECHNICAL SPECIFICATION FOR DATA CONCENTRATOR.pdf"
+    },
+    "20 - METERS/EDMS 20-503 - 01 - 02 SPECIFICATION FOR AUTOMATIC 3-PHASE METER TESTING EQUIPMENT.pdf": {
+      "hash": "0c0130d253ffba249ac8528727b68670053e3d044eae9780255feb9cc1d78121",
+      "chunks": 51,
+      "topic": "20 - METERS",
+      "source": "EDMS 20-503 - 01 - 02 SPECIFICATION FOR AUTOMATIC 3-PHASE METER TESTING EQUIPMENT.pdf"
+    },
+    "20 - METERS/EDMS 20-504-1 - TECHNICAL SPECIFICATION FOR AUTOMATIC SINGLE PHASE TESTING EQUIPMENTS.pdf": {
+      "hash": "aac5bb76c12644124124d416b93d07184901dc0dfcb07c6d872a245950cedb14",
+      "chunks": 66,
+      "topic": "20 - METERS",
+      "source": "EDMS 20-504-1 - TECHNICAL SPECIFICATION FOR AUTOMATIC SINGLE PHASE TESTING EQUIPMENTS.pdf"
+    },
+    "21 - CAPACITORS/EDMS 21 - 301 - 1 - SPECIFICATION FOR SHUNT POWER CAPACITORS OF THE SELF-HEALING TYPE FOR low voltage network UP TO 50 KVAR.pdf": {
+      "hash": "fbf1c31f7e60a0f14ae6116e49eee9449639241ab87a300fab631955cc5bc4a4",
+      "chunks": 46,
+      "topic": "21 - CAPACITORS",
+      "source": "EDMS 21 - 301 - 1 - SPECIFICATION FOR SHUNT POWER CAPACITORS OF THE SELF-HEALING TYPE FOR low voltage network UP TO 50 KVAR.pdf"
+    },
+    "21 - CAPACITORS/EDMS 21-400-1 - TECHNICAL SPECIFICATION FOR FIXED POWER CAPACITOR BANK 1 K.V UP TO 24 K.V(INDOOR OUTDOOR).pdf": {
+      "hash": "91e5e22315061ccb753a58ab6e338017e33ca41611002d1137297b7e4c40a4c1",
+      "chunks": 59,
+      "topic": "21 - CAPACITORS",
+      "source": "EDMS 21-400-1 - TECHNICAL SPECIFICATION FOR FIXED POWER CAPACITOR BANK 1 K.V UP TO 24 K.V(INDOOR OUTDOOR).pdf"
+    },
+    "21 - CAPACITORS/EDMS 21-401-01 - TECHNICAL SPECIFICATION FOR SWITCHED POWER CAPACITOR BANK 1 K.V UP TO 24 K.V (INDOOR).pdf": {
+      "hash": "f193ab38c6c57dc122dfbdbd8dace28d5d5cbcf9cfec179227a9b7257d17d2a9",
+      "chunks": 55,
+      "topic": "21 - CAPACITORS",
+      "source": "EDMS 21-401-01 - TECHNICAL SPECIFICATION FOR SWITCHED POWER CAPACITOR BANK 1 K.V UP TO 24 K.V (INDOOR).pdf"
+    },
+    "22 - TUBE &OUT DOOR LED LUMINARIES/EDMS 22-300-2 - TECHNICAL SPECIFI CATION FOR LED TUBE LIGHT (T8-9W-60 cm) (MILKY).pdf": {
+      "hash": "e2d9d22561d10df25bd67d8b605c8127d4fe65d579cf64b0af65a2b09956ba5d",
+      "chunks": 18,
+      "topic": "22 - TUBE &OUT DOOR LED LUMINARIES",
+      "source": "EDMS 22-300-2 - TECHNICAL SPECIFI CATION FOR LED TUBE LIGHT (T8-9W-60 cm) (MILKY).pdf"
+    },
+    "22 - TUBE &OUT DOOR LED LUMINARIES/EDMS 22-301-2 - TECHNICAL SPECIFICATION FOR LED TUBE LIGHT (T8-18W-120 cm) (MILKY).pdf": {
+      "hash": "05d8a8dec9cb5e84e5bde7a22104b4c1a840fd2e4b52891ebb94f05f06862aa7",
+      "chunks": 18,
+      "topic": "22 - TUBE &OUT DOOR LED LUMINARIES",
+      "source": "EDMS 22-301-2 - TECHNICAL SPECIFICATION FOR LED TUBE LIGHT (T8-18W-120 cm) (MILKY).pdf"
+    },
+    "22 - TUBE &OUT DOOR LED LUMINARIES/EDMS 22-302-2 - TECHNICAL SPECIFICATION FOR OUTDOOR LED LUMINARIES.pdf": {
+      "hash": "4494798732d28b227ba802c9efaa8220645c8f3816f213024c8ca29f5a2172e6",
+      "chunks": 22,
+      "topic": "22 - TUBE &OUT DOOR LED LUMINARIES",
+      "source": "EDMS 22-302-2 - TECHNICAL SPECIFICATION FOR OUTDOOR LED LUMINARIES.pdf"
+    },
+    "23 - EESS& GENERATORS/EDMS 23 – 301 – 1 - TECHNICAL SPECIFICATION FOR Electrical Energy Storage System (EESS).pdf": {
+      "hash": "fcb6c25410aaccac3fac68944c38b11b2972740755e6adaae5998b02a6746395",
+      "chunks": 52,
+      "topic": "23 - EESS& GENERATORS",
+      "source": "EDMS 23 – 301 – 1 - TECHNICAL SPECIFICATION FOR Electrical Energy Storage System (EESS).pdf"
+    },
+    "23 - EESS& GENERATORS/EDMS 23-300-1 - PORTABLE DIESEL GENERATING UNITS WITH RATINGS 100 KVA UP TO 1000 KVA.pdf": {
+      "hash": "632b2790d2125a36188189e80bb74e4ee3a8542027ac2daddffa9289d731b701",
+      "chunks": 71,
+      "topic": "23 - EESS& GENERATORS",
+      "source": "EDMS 23-300-1 - PORTABLE DIESEL GENERATING UNITS WITH RATINGS 100 KVA UP TO 1000 KVA.pdf"
+    },
+    "24 - PHOTOVOLTAIC SYSTEM/EDMS 24-300-2 - TECHNICAL SPECIFICATION FOR GRID INTERCONNECTED PHOTO VOLTAIC SYSTEM UP TO 30 MW DC.pdf": {
+      "hash": "9ce119f692f7f95575986037da22cec6e3366dd543fc95366d520835d83fc913",
+      "chunks": 62,
+      "topic": "24 - PHOTOVOLTAIC SYSTEM",
+      "source": "EDMS 24-300-2 - TECHNICAL SPECIFICATION FOR GRID INTERCONNECTED PHOTO VOLTAIC SYSTEM UP TO 30 MW DC.pdf"
+    },
+    "25 - TRANSFORMERS FITTINGS/EDMS 25-400-1 - SPECIFICATIONS FOR SELF INDICATING ORANGE SILICA GEL CRYSTALS.pdf": {
+      "hash": "5c0653c4ecb628b3b968794a9af5cf027d0bebb17455cbd30c33aa8c0333b7c6",
+      "chunks": 5,
+      "topic": "25 - TRANSFORMERS FITTINGS",
+      "source": "EDMS 25-400-1 - SPECIFICATIONS FOR SELF INDICATING ORANGE SILICA GEL CRYSTALS.pdf"
+    },
+    "25 - TRANSFORMERS FITTINGS/EDMS 25-401 - SPECIFICATION FOR ELECTRICAL INSULATING OIL.pdf": {
+      "hash": "750c79cad71a05b50ab89e8a07c600fe22f2e7f37f52043d85c05d7e8a1f1487",
+      "chunks": 15,
+      "topic": "25 - TRANSFORMERS FITTINGS",
+      "source": "EDMS 25-401 - SPECIFICATION FOR ELECTRICAL INSULATING OIL.pdf"
+    },
+    "26 - EARTHING TOOLS/EDMS 26-200-0 - FOR COUPLING TRANSFORMERS 22 11 KV WITH RATING up to 30 MVA.pdf": {
+      "hash": "403d3b1f7b63c0ac4823de4bfe8f4d45a98b01cc75d6713c4fab28959473f19e",
+      "chunks": 37,
+      "topic": "26 - EARTHING TOOLS",
+      "source": "EDMS 26-200-0 - FOR COUPLING TRANSFORMERS 22 11 KV WITH RATING up to 30 MVA.pdf"
+    },
+    "27 - BATTERY CHARGERS/EDMS 27-300-2 - SPECIFICATION FOR AUTOMATIC BATTERY CHARGER and DC SOURCE 110 V 40 ADC.pdf": {
+      "hash": "b00dccf592f85c04335a9be63f7cb147625ddbcc6aa22e73bcec533130b4f4d7",
+      "chunks": 75,
+      "topic": "27 - BATTERY CHARGERS",
+      "source": "EDMS 27-300-2 - SPECIFICATION FOR AUTOMATIC BATTERY CHARGER and DC SOURCE 110 V 40 ADC.pdf"
+    },
+    "27 - BATTERY CHARGERS/EDMS 27-301-1 - SPECIFICATION FOR Vented Nickel Cadmium Batteries.pdf": {
+      "hash": "a9090490bae4a9ecc2ed64e3363687fd66851df2a27b433d78804ed89400f2e6",
+      "chunks": 39,
+      "topic": "27 - BATTERY CHARGERS",
+      "source": "EDMS 27-301-1 - SPECIFICATION FOR Vented Nickel Cadmium Batteries.pdf"
+    },
+    "27 - BATTERY CHARGERS/EDMS 27-304-1 - TECHNICAL SPECIFICATION FOR BATTERY CHARGER and DC SOURCE 24 V 30 ADC.pdf": {
+      "hash": "e094035e038d5f29a6805457497c180f977a6da03f5a783e7f9cc1add5054569",
+      "chunks": 57,
+      "topic": "27 - BATTERY CHARGERS",
+      "source": "EDMS 27-304-1 - TECHNICAL SPECIFICATION FOR BATTERY CHARGER and DC SOURCE 24 V 30 ADC.pdf"
+    },
+    "27 - BATTERY CHARGERS/EDMS 27-305-1 - SPECIFICATION FOR Uninterruptible Power Systems (UPS).pdf": {
+      "hash": "30f4e6dd23fee07ae8262f927189fc4064c8eb7fff85b68a5a1fa0bb87c65bad",
+      "chunks": 78,
+      "topic": "27 - BATTERY CHARGERS",
+      "source": "EDMS 27-305-1 - SPECIFICATION FOR Uninterruptible Power Systems (UPS).pdf"
+    },
+    "28 - TOOLS & EQUIPMENTS/EDMS 28-400-1 - Technical Specification of Hydraulic Press for Low Voltage & medium voltage cables.pdf": {
+      "hash": "40be53b2dc9f16948988cea75bffe66a31adec9d756a54e916c98735caa937ca",
+      "chunks": 19,
+      "topic": "28 - TOOLS & EQUIPMENTS",
+      "source": "EDMS 28-400-1 - Technical Specification of Hydraulic Press for Low Voltage & medium voltage cables.pdf"
+    },
+    "29 - COATING MATERIALS/EDMS 29-300-1 - SPECIFICATION FOR ELECTRICAL INSULATION COATING.pdf": {
+      "hash": "27b8b3d8c293423d17a27f17102b65855dfc0ba959293703c7a989529f28e85e",
+      "chunks": 34,
+      "topic": "29 - COATING MATERIALS",
+      "source": "EDMS 29-300-1 - SPECIFICATION FOR ELECTRICAL INSULATION COATING.pdf"
+    },
+    "29 - COATING MATERIALS/EDMS 29-301-1 - SPECIFICATION FOR METALLIC SURFACE PROTECTION (HOT-DIP GALVANIZATION COATING MATERIALS).pdf": {
+      "hash": "2085a7adf77ba5e04da0b5f120729ca6c93ec66e497e9266be9a67f71713fb83",
+      "chunks": 33,
+      "topic": "29 - COATING MATERIALS",
+      "source": "EDMS 29-301-1 - SPECIFICATION FOR METALLIC SURFACE PROTECTION (HOT-DIP GALVANIZATION COATING MATERIALS).pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30 - 310 – 1 - TECHNICAL SPECIFICATION FOR POLYETHELENE UNDER GROUND WARNING TAPE.pdf": {
+      "hash": "deaf5e8de927632df15edd771f4c32cb8d1458e0a8b699d6f63637e13e9a592b",
+      "chunks": 27,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30 - 310 – 1 - TECHNICAL SPECIFICATION FOR POLYETHELENE UNDER GROUND WARNING TAPE.pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-300-1 - SPECIFICATION FOR MEDIUM LOW VOLTAGE LIVE-WORKING DETECTOR RANGE FROM 380 V TO 36 kV.pdf": {
+      "hash": "f0764204161978fea164273935d2cb2ad97e8eda0b3cd4d0f5ad932ee4f98135",
+      "chunks": 24,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-300-1 - SPECIFICATION FOR MEDIUM LOW VOLTAGE LIVE-WORKING DETECTOR RANGE FROM 380 V TO 36 kV.pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-301-1 - TECHNICAL SPECIFICATION FOR LIVE WORKING – POTABLE EQUIPMENT FOR EARTHING MEDIUM LOW VOLTAGE NETWORKS.pdf": {
+      "hash": "c526c9f1b4a2ed22a669e0b13094e2fcca9f40062fc5a63a3b82ff3de0f46d83",
+      "chunks": 19,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-301-1 - TECHNICAL SPECIFICATION FOR LIVE WORKING – POTABLE EQUIPMENT FOR EARTHING MEDIUM LOW VOLTAGE NETWORKS.pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-302-1 - SPECIFICATION FOR PERSONAL PROTECTIVE EQUIPMENT FALL PREVENTION FROM A HEIGHT (HARNESSES).pdf": {
+      "hash": "bc9ff967c855a7752dc5cb4a38c965f8e9d0f7f46688a8f552dbfd6cc094ee5b",
+      "chunks": 29,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-302-1 - SPECIFICATION FOR PERSONAL PROTECTIVE EQUIPMENT FALL PREVENTION FROM A HEIGHT (HARNESSES).pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-303-1 - SPECIFICATION FOR LOW VOLTAGE SAFETY INSULATED FOOTWEAR“SHOES”.pdf": {
+      "hash": "6c46cf9ac6c4c3ab1597d775db61effe6a94e01b8cf06077623b8433b4055fad",
+      "chunks": 38,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-303-1 - SPECIFICATION FOR LOW VOLTAGE SAFETY INSULATED FOOTWEAR“SHOES”.pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-304-1 - SPECIFICATION FOR MEDIUM VOLTAGE SAFETY INSULATED FOOTWEAR“SHOES”.pdf": {
+      "hash": "8d89012204d7d35294a0b468d7c363c8d748a62c4ade293aaf86b3889bab2793",
+      "chunks": 28,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-304-1 - SPECIFICATION FOR MEDIUM VOLTAGE SAFETY INSULATED FOOTWEAR“SHOES”.pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-306-1 - SPECIFICATION FOR PERSONAL PROTECTIVE EQUIPMENT (HEAD PROTECTION HELMET).pdf": {
+      "hash": "e7e7b15e7c1b4dfa4bae1df6887f35fe10bc6622767de66a6931fbc1bf77bde5",
+      "chunks": 25,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-306-1 - SPECIFICATION FOR PERSONAL PROTECTIVE EQUIPMENT (HEAD PROTECTION HELMET).pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-307-1 - SPECIFICATION FOR PERSONAL PROTECTIVE EQUIPMENT EYE and FACE PROTECTION.pdf": {
+      "hash": "6a714d9a45f489a866e8eac3d4bbf810ae8979fd3eed633b10f46cdfb2ee9c23",
+      "chunks": 35,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-307-1 - SPECIFICATION FOR PERSONAL PROTECTIVE EQUIPMENT EYE and FACE PROTECTION.pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-308-1 - SPECIFICATION FOR CLEAN AGENT FIRE SUPPRESSION SYSTEM (HFC-227ea, FK-5-1-12).pdf": {
+      "hash": "e3ac4881a4c901bc6f37bfe3451ad39eda76d7cee0c9ad0ad8ab40971b2aa173",
+      "chunks": 49,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-308-1 - SPECIFICATION FOR CLEAN AGENT FIRE SUPPRESSION SYSTEM (HFC-227ea, FK-5-1-12).pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-309-1 - SPECIFICATION FOR PERSONAL PROTECTIVE EQUIPMENT HAND PROTECTION GLOVES (ELECTRICAL INSULATING COMPOSITE).pdf": {
+      "hash": "3b95664c5e687d2d14994f35331837971c744d4600c14f7214abcd8274993f7b",
+      "chunks": 35,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-309-1 - SPECIFICATION FOR PERSONAL PROTECTIVE EQUIPMENT HAND PROTECTION GLOVES (ELECTRICAL INSULATING COMPOSITE).pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-311-1 - SPECIFICATION FOR Protective Fence specification.pdf": {
+      "hash": "83e789e807438d35943ac015091cd6c0f9df87693def69e017fc91da6f0989e9",
+      "chunks": 9,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-311-1 - SPECIFICATION FOR Protective Fence specification.pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-312-2 - SPECIFICATION FOR ROBE OPERATED EXTENDING LADDER (ALUMINUM FIBER).pdf": {
+      "hash": "b64cd3d580d1aebde1ba49067381f422f20306e9038cd3c96b5da0d8019f8fb2",
+      "chunks": 27,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-312-2 - SPECIFICATION FOR ROBE OPERATED EXTENDING LADDER (ALUMINUM FIBER).pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-313-1 - SPECIFICATION FOR AEROSOL-BASED FIRE SUPPRESSION SYSTEM.pdf": {
+      "hash": "a73881a946aebcbe967204c19e2a6fd7eb9405855390d9f6607d06dd4c7f8eae",
+      "chunks": 36,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-313-1 - SPECIFICATION FOR AEROSOL-BASED FIRE SUPPRESSION SYSTEM.pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-314-1 - SPECIFICATION FOR PERSONAL PROTECTIVE EQUIPMENT WORKWEAR (COVERALLS).pdf": {
+      "hash": "e93496b125fcfd2198bc3cde2654766cc70b89852615c0f8e0d351e79b1a8cb7",
+      "chunks": 23,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-314-1 - SPECIFICATION FOR PERSONAL PROTECTIVE EQUIPMENT WORKWEAR (COVERALLS).pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-315-1 - SPECIFICATION FOR CARBON DIOXIDE FIRE SUPPRESSION SYSTEM.pdf": {
+      "hash": "88458578343173f1a98ef5550e58c5377c0cd2d660cd4aa0f8dc3636c340d6a7",
+      "chunks": 47,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-315-1 - SPECIFICATION FOR CARBON DIOXIDE FIRE SUPPRESSION SYSTEM.pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS 30-316-1 - SPECIFICATIONFORSTATIONARY PUMPS FOR FIRE PROTECTION SYSTEMG.p.m – bar.pdf": {
+      "hash": "99316feda08e43bac2388eaf416055d14a0115c9e6b5444cfbc59a7f398ce00f",
+      "chunks": 20,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS 30-316-1 - SPECIFICATIONFORSTATIONARY PUMPS FOR FIRE PROTECTION SYSTEMG.p.m – bar.pdf"
+    },
+    "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS/EDMS30-305-1 - SPECIFICATION FOR MECHANICAL HARDWORK FOOTWEAR“SHOES”.pdf": {
+      "hash": "0cb3bbb22c0bfa3bf6ff24e4ad7e2d8d26afc1772739e84c9decda17bc297bd8",
+      "chunks": 12,
+      "topic": "30 - SAFETY AND PERSONAL PROTECTIVE,HEALTHY EQUIPMENTS",
+      "source": "EDMS30-305-1 - SPECIFICATION FOR MECHANICAL HARDWORK FOOTWEAR“SHOES”.pdf"
+    },
+    "31 - أجهزة اختبار الكابلات CABLE TESTING EQUIPMENT/EDMS 31-400-1 - technical specification for fully automated cable test fault locating van.pdf": {
+      "hash": "50168d193b4fef396c46d85fbc14a0be068f9519f64ab4d76d04298712abdadd",
+      "chunks": 44,
+      "topic": "31 - أجهزة اختبار الكابلات CABLE TESTING EQUIPMENT",
+      "source": "EDMS 31-400-1 - technical specification for fully automated cable test fault locating van.pdf"
+    },
+    "32 - اجهزة INSTRUMENTS/EDMS 32-300 -1 - SPECIFICATION FOR Supra-Harmonic Power Quality Analyzer.pdf": {
+      "hash": "744691586127d91ce937b959cbeedf979c532f30d37a4715cf410bf07cd55e36",
+      "chunks": 36,
+      "topic": "32 - اجهزة INSTRUMENTS",
+      "source": "EDMS 32-300 -1 - SPECIFICATION FOR Supra-Harmonic Power Quality Analyzer.pdf"
+    },
+    "32 - اجهزة INSTRUMENTS/EDMS 32-301-1 - SPECIFICATION FOR INFRA-RED THERMOGRAPHY CAMERA.pdf": {
+      "hash": "0544590c7b2fcf2b33d29f9f173a42b0a11f62de0aa0e8250c1c3b2fde86c0ea",
+      "chunks": 29,
+      "topic": "32 - اجهزة INSTRUMENTS",
+      "source": "EDMS 32-301-1 - SPECIFICATION FOR INFRA-RED THERMOGRAPHY CAMERA.pdf"
+    },
+    "32 - اجهزة INSTRUMENTS/EDMS 32-302-1 - SPECIFICATION FOR DIGITAL EARTH RESISTANCE TESTER.pdf": {
+      "hash": "6b835b987e4e30e7b62d6f6795c98919f6c1457409176d57155133f50b4b09e0",
+      "chunks": 28,
+      "topic": "32 - اجهزة INSTRUMENTS",
+      "source": "EDMS 32-302-1 - SPECIFICATION FOR DIGITAL EARTH RESISTANCE TESTER.pdf"
+    }
+  }
+}
