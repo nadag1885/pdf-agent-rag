@@ -5,6 +5,7 @@ an identical embedding model and collection configuration.
 """
 from __future__ import annotations
 
+import logging
 import math
 import time
 from collections import deque
@@ -14,6 +15,8 @@ from langchain_chroma import Chroma
 from langchain_core.embeddings import Embeddings
 
 from . import config
+
+_log = logging.getLogger("pdf_agent.store")
 
 
 class GeminiEmbeddings(Embeddings):
@@ -77,7 +80,7 @@ class GeminiEmbeddings(Embeddings):
                     raise
                 # Back off past the current rate-limit window, and slow the
                 # pace so the next requests don't hit the same wall.
-                print(f"  . embedding rate-limited, waiting {delay:.0f}s", flush=True)
+                _log.warning("embedding rate-limited, waiting %.0fs", delay)
                 time.sleep(delay)
                 delay = min(delay * 2, 90)
                 self._rpm = max(15, self._rpm - 5)
@@ -132,8 +135,13 @@ def get_embeddings():
 
     return HuggingFaceEmbeddings(
         model_name=config.EMBEDDING_MODEL_NAME,
-        # Normalizing gives cleaner cosine distances for the relevance guard.
-        encode_kwargs={"normalize_embeddings": True},
+        encode_kwargs={
+            # Normalizing gives cleaner cosine distances for the relevance guard.
+            "normalize_embeddings": True,
+            # The progress bar writes to stderr, which on hosted runtimes may be
+            # a closed pipe: that write raises BrokenPipeError mid-answer.
+            "show_progress_bar": False,
+        },
     )
 
 

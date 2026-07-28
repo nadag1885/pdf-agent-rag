@@ -10,8 +10,16 @@ administrator into data/<topic>/ and indexed with
 """
 from __future__ import annotations
 
+import logging
+import os
 import sys
-import traceback
+
+# Progress bars from the model libraries write to stderr. On hosted runtimes
+# that stream can be closed, and the write then raises BrokenPipeError in the
+# middle of answering. Disable them before those libraries are imported.
+os.environ.setdefault("HF_HUB_DISABLE_PROGRESS_BARS", "1")
+os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
+os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 
 # ChromaDB needs sqlite3 >= 3.35, but some hosts (Streamlit Community Cloud)
 # ship an older system sqlite3. Swap in the bundled modern build before
@@ -41,6 +49,21 @@ from src.rag.qa import (  # noqa: E402
 st.set_page_config(page_title="Document Q&A", page_icon="📚", layout="centered")
 
 ALL_TYPES = "🔎 Search all types"
+
+logger = logging.getLogger("pdf_agent")
+
+
+def _log_exception(message: str) -> None:
+    """Log the current exception without ever raising.
+
+    Reporting a failure must not itself fail. Hosted runtimes can hand the
+    process a closed stdout/stderr, so anything that writes there (including
+    ``traceback.print_exc``) can raise BrokenPipeError and take the app down.
+    """
+    try:
+        logger.exception(message)
+    except Exception:
+        pass
 
 
 def _key_configured() -> bool:
@@ -341,9 +364,11 @@ def main() -> None:
                 )
                 return
             except Exception as exc:  # last-resort safety net
-                # Log the full traceback for the administrator; the user gets a
-                # readable message. Without this the cause is unrecoverable.
-                traceback.print_exc()
+                # Record the traceback for the administrator, but never let
+                # reporting an error become an error: on hosted runtimes stderr
+                # can be a closed pipe, and writing to it raises
+                # BrokenPipeError, which would crash the whole app.
+                _log_exception("Answering the question failed")
                 msg = (
                     "Something went wrong while answering "
                     f"({type(exc).__name__}). Please try again — if it keeps "
@@ -371,4 +396,14 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception:
+        # Show a readable message instead of the runtime's raw crash page, and
+        # make sure logging the failure can't fail either.
+        _log_exception("Unhandled error in the application")
+        st.error(
+            "The application hit an unexpected error. Please reload the page "
+            "and try again. If it keeps happening, an administrator should "
+            "check the application logs."
+        )
