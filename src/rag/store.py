@@ -135,13 +135,14 @@ def get_embeddings():
 
     return HuggingFaceEmbeddings(
         model_name=config.EMBEDDING_MODEL_NAME,
-        encode_kwargs={
-            # Normalizing gives cleaner cosine distances for the relevance guard.
-            "normalize_embeddings": True,
-            # The progress bar writes to stderr, which on hosted runtimes may be
-            # a closed pipe: that write raises BrokenPipeError mid-answer.
-            "show_progress_bar": False,
-        },
+        # Normalizing gives cleaner cosine distances for the relevance guard.
+        encode_kwargs={"normalize_embeddings": True},
+        # Keep the encoding progress bar off: it writes to stderr, which on a
+        # hosted runtime can be a closed pipe, and that write raises
+        # BrokenPipeError in the middle of answering. (Passing
+        # show_progress_bar via encode_kwargs instead would collide with the
+        # value LangChain already supplies.)
+        show_progress=False,
     )
 
 
