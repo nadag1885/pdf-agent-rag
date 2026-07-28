@@ -11,6 +11,7 @@ administrator into data/<topic>/ and indexed with
 from __future__ import annotations
 
 import sys
+import traceback
 
 # ChromaDB needs sqlite3 >= 3.35, but some hosts (Streamlit Community Cloud)
 # ship an older system sqlite3. Swap in the bundled modern build before
@@ -340,7 +341,14 @@ def main() -> None:
                 )
                 return
             except Exception as exc:  # last-resort safety net
-                msg = f"Something went wrong while answering: {type(exc).__name__}."
+                # Log the full traceback for the administrator; the user gets a
+                # readable message. Without this the cause is unrecoverable.
+                traceback.print_exc()
+                msg = (
+                    "Something went wrong while answering "
+                    f"({type(exc).__name__}). Please try again — if it keeps "
+                    "happening, restart the app so it reopens the index."
+                )
                 st.error(msg)
                 st.session_state.messages.append({"role": "assistant", "content": msg})
                 return

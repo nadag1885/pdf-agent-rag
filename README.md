@@ -149,6 +149,33 @@ filename and page. A "🔄 Change topic" button in the sidebar switches topics.
 
 ---
 
+## ⚠️ Never touch `vectorstore/` while the app is running
+
+The app keeps the ChromaDB database in `vectorstore/` **open** for as long as it
+is running. If those files are replaced underneath it, its file handles point at
+data that no longer exists and the next question fails with an error such as
+`BrokenPipeError`. The database is not damaged — the running process simply has
+a stale view of it — but the app must be restarted to recover.
+
+`vectorstore/` is committed to this repository on purpose, so a deployment loads
+the prebuilt index immediately and never depends on embedding-API quota or long
+PDF processing. The trade-off is that ordinary Git commands rewrite those files,
+so follow these rules:
+
+1. **Stop the Streamlit app before rebuilding the index**
+   (`python scripts/index_documents.py --rebuild` or an incremental update).
+2. **Stop the Streamlit app before any Git operation that can rewrite
+   `vectorstore/`** — `git pull`, `git checkout`, `git cherry-pick`, `git merge`,
+   `git reset`, or copying files into that folder by hand.
+3. **Restart the app after anything that modifies `vectorstore/`**, so it reopens
+   the database files.
+4. **Never let the app and the indexer use the same Chroma database at the same
+   time.** One writer at a time: index first, then start the app.
+
+If a question ever fails with `BrokenPipeError` or a similar I/O error, restart
+the app — that is almost always the cause. The full traceback is written to the
+terminal where Streamlit is running.
+
 ## How the "only answer from documents" guarantee works
 1. **Relevance guard** — the question is embedded and matched against the indexed
    chunks. If nothing is similar enough, the app returns the "not found" sentence
